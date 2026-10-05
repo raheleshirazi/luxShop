@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#800020" />
+
+    <title>قوانین و مقررات | لوکس‌شاپ</title>
+    <meta name="description"
+        content="قوانین و مقررات استفاده از فروشگاه اینترنتی لوکس‌شاپ — شرایط خرید، پرداخت و ارسال." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://example.com/rules.html" />
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <header class="site-header" id="siteHeader">
+        <div class="topbar">
+            <div class="container topbar__inner">
+                <p class="topbar__text">🚚 ارسال رایگان برای خریدهای بالای ۵۰۰ هزار تومان</p>
+                <ul class="topbar__links">
+                    <li><a href="order-tracking.html">پیگیری سفارش</a></li>
+                    <li><a href="faq.html">سوالات متداول</a></li>
+                    <li><a href="contact.html">تماس با ما</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="container header-main__inner">
+                <button class="icon-btn menu-toggle" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+
+                <a href="index.html" class="logo" aria-label="لوکس‌شاپ">
+                    <span class="logo__mark">L</span>
+                    <span class="logo__text">لوکس<b>شاپ</b></span>
+                </a>
+
+                <form class="search" id="searchForm" role="search" autocomplete="off">
+                    <input type="search" id="searchInput" class="search__input"
+                        placeholder="جست‌وجوی محصول، برند یا دسته‌بندی..." aria-label="جست‌وجوی محصول" />
+                    <button type="submit" class="search__btn" aria-label="جست‌وجو">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="header-actions">
+                    <a href="login.html" class="icon-btn account-btn">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <circle cx="12" cy="8" r="4"></circle>
+                            <path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"></path>
+                        </svg>
+                        <span class="account-btn__text">ورود / ثبت‌نام</span>
+                    </a>
+                    <button class="icon-btn cart-btn" id="cartBtn" aria-label="سبد خرید">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="20" r="1.5"></circle>
+                            <circle cx="18" cy="20" r="1.5"></circle>
+                            <path d="M2 3h3l2.4 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 7H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">۰</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav" id="mainNav" aria-label="منوی اصلی">
+            <div class="container">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a class="main-nav__link" href="index.html">خانه</a></li>
+                    <li class="main-nav__item has-dropdown">
+                        <a class="main-nav__link" href="shop.html">
+                            دسته‌بندی‌ها
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="shop.html?cat=digital">کالای دیجیتال</a></li>
+                            <li><a href="shop.html?cat=clothing">پوشاک</a></li>
+                            <li><a href="shop.html?cat=home">لوازم خانه</a></li>
+                            <li><a href="shop.html?cat=beauty">زیبایی و سلامت</a></li>
+                            <li><a href="shop.html?cat=accessories">اکسسوری</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="shop.html">فروشگاه</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="shop.html?sort=discount">تخفیف‌ها 🔥</a>
+                    </li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="about.html">درباره ما</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="contact.html">تماس با ما</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu__head">
+            <span class="logo"><span class="logo__mark">L</span><span class="logo__text">لوکس<b>شاپ</b></span></span>
+            <button class="icon-btn" id="mobileMenuClose" aria-label="بستن منو">✕</button>
+        </div>
+        <ul class="mobile-menu__list">
+            <li><a href="index.html">خانه</a></li>
+            <li><a href="shop.html">فروشگاه</a></li>
+            <li><a href="shop.html?cat=digital">کالای دیجیتال</a></li>
+            <li><a href="shop.html?cat=clothing">پوشاک</a></li>
+            <li><a href="shop.html?cat=home">لوازم خانه</a></li>
+            <li><a href="shop.html?cat=beauty">زیبایی و سلامت</a></li>
+            <li><a href="shop.html?cat=accessories">اکسسوری</a></li>
+            <li><a href="about.html">درباره ما</a></li>
+            <li><a href="contact.html">تماس با ما</a></li>
+            <li><a href="dashboard.html">داشبورد</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="page-head page-head--sm">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="مسیر صفحه">
+                    <a href="index.html">خانه</a>
+                    <span>/</span>
+                    <span class="breadcrumb__current">قوانین و مقررات</span>
+                </nav>
+                <div class="page-head__row">
+                    <div>
+                        <h1 class="page-head__title">قوانین و مقررات</h1>
+                        <p class="page-head__desc">آخرین به‌روزرسانی: فروردین ۱۴۰۴</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section content-page">
+            <div class="container content-page__container">
+                <div class="content-layout">
+
+                    <!-- Sidebar TOC -->
+                    <aside class="content-toc">
+                        <h3>فهرست مطالب</h3>
+                        <ul>
+                            <li><a href="#intro">مقدمه</a></li>
+                            <li><a href="#account">حساب کاربری</a></li>
+                            <li><a href="#orders">ثبت سفارش</a></li>
+                            <li><a href="#payment">پرداخت</a></li>
+                            <li><a href="#shipping">ارسال</a></li>
+                            <li><a href="#returns">بازگشت کالا</a></li>
+                            <li><a href="#warranty">گارانتی</a></li>
+                            <li><a href="#liability">مسئولیت</a></li>
+                            <li><a href="#changes">تغییرات</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Main content -->
+                    <article class="content-body">
+
+                        <section id="intro" class="content-block">
+                            <h2>۱. مقدمه</h2>
+                            <p>
+                                استفاده از فروشگاه اینترنتی لوکس‌شاپ به‌معنای پذیرش تمامی قوانین و مقررات ذکرشده در
+                                این صفحه است. لطفاً پیش از ثبت سفارش، این شرایط را به‌دقت مطالعه کنید.
+                            </p>
+                            <p>
+                                این قوانین در راستای حمایت از حقوق مصرف‌کننده و در چارچوب قانون تجارت الکترونیک
+                                جمهوری اسلامی ایران تدوین شده است.
+                            </p>
+                        </section>
+
+                        <section id="account" class="content-block">
+                            <h2>۲. حساب کاربری</h2>
+                            <ul class="content-list">
+                                <li>کاربر موظف است هنگام ثبت‌نام، اطلاعات صحیح و به‌روز وارد کند.</li>
+                                <li>حفظ رمز عبور و امنیت حساب بر عهده کاربر است.</li>
+                                <li>در صورت مشاهده هرگونه فعالیت مشکوک، فوراً به پشتیبانی اطلاع دهید.</li>
+                                <li>هر کاربر فقط مجاز به داشتن یک حساب کاربری است.</li>
+                            </ul>
+                        </section>
+
+                        <section id="orders" class="content-block">
+                            <h2>۳. ثبت سفارش</h2>
+                            <ul class="content-list">
+                                <li>سفارش‌ها پس از تأیید پرداخت، وارد مرحله پردازش می‌شوند.</li>
+                                <li>ممکن است به دلیل موجودی نبودن، سفارش لغو و مبلغ بازگردانده شود.</li>
+                                <li>تأیید نهایی سفارش، از طریق پیامک یا ایمیل به اطلاع شما می‌رسد.</li>
+                                <li>سفارش‌های ناقص یا مشکوک، بدون اطلاع قبلی لغو خواهند شد.</li>
+                            </ul>
+                        </section>
+
+                        <section id="payment" class="content-block">
+                            <h2>۴. پرداخت</h2>
+                            <ul class="content-list">
+                                <li>پرداخت آنلاین از طریق درگاه‌های بانکی معتبر انجام می‌شود.</li>
+                                <li>امکان پرداخت در محل فقط برای سفارش‌های شهر تهران وجود دارد.</li>
+                                <li>در صورت پرداخت ناموفق، مبلغ حداکثر تا ۷۲ ساعت به حساب شما بازمی‌گردد.</li>
+                                <li>فاکتور رسمی در صورت درخواست، برای سفارش‌های سازمانی صادر می‌شود.</li>
+                            </ul>
+                        </section>
+
+                        <section id="shipping" class="content-block">
+                            <h2>۵. ارسال</h2>
+                            <ul class="content-list">
+                                <li>ارسال به تمام نقاط ایران با پست پیشتاز یا پیک امکان‌پذیر است.</li>
+                                <li>زمان تحویل بسته به مقصد، بین ۱ تا ۵ روز کاری متغیر است.</li>
+                                <li>مسئولیت صحت آدرس و کد پستی، بر عهده خریدار است.</li>
+                                <li>در صورت عدم تحویل بسته به دلیل آدرس اشتباه، هزینه ارسال مجدد با خریدار است.</li>
+                            </ul>
+                        </section>
+
+                        <section id="returns" class="content-block">
+                            <h2>۶. بازگشت کالا</h2>
+                            <ul class="content-list">
+                                <li>امکان بازگشت کالا تا ۷ روز پس از دریافت وجود دارد.</li>
+                                <li>کالا باید در بسته‌بندی اصلی و بدون استفاده باشد.</li>
+                                <li>در صورت معیوب بودن کالا، هزینه ارسال مرجوعی با فروشگاه است.</li>
+                                <li>در صورت انصراف از خرید، هزینه مرجوعی با خریدار است.</li>
+                            </ul>
+                        </section>
+
+                        <section id="warranty" class="content-block">
+                            <h2>۷. گارانتی</h2>
+                            <ul class="content-list">
+                                <li>تمام کالاها دارای گارانتی اصالت و سلامت فیزیکی هستند.</li>
+                                <li>گارانتی محصولات دیجیتال، طبق شرایط برند مربوطه اعمال می‌شود.</li>
+                                <li>خسارت ناشی از استفاده نادرست، از پوشش گارانتی خارج است.</li>
+                            </ul>
+                        </section>
+
+                        <section id="liability" class="content-block">
+                            <h2>۸. مسئولیت‌ها</h2>
+                            <p>
+                                لوکس‌شاپ مسئول خسارات ناشی از استفاده نادرست کاربران از محصولات نیست.
+                                همچنین در صورت بروز مشکلات فنی خارج از کنترل ما (مانند قطعی اینترنت یا درگاه بانکی)،
+                                فروشگاه مسئولیتی نمی‌پذیرد و در اسرع وقت مشکل را پیگیری می‌کند.
+                            </p>
+                        </section>
+
+                        <section id="changes" class="content-block">
+                            <h2>۹. تغییرات در قوانین</h2>
+                            <p>
+                                لوکس‌شاپ حق تغییر این قوانین را در هر زمان برای خود محفوظ می‌داند.
+                                تغییرات از لحظه انتشار در همین صفحه، لازم‌الاجرا خواهند بود.
+                            </p>
+                            <p>
+                                در صورت داشتن هرگونه سؤال، می‌توانید از طریق صفحه
+                                <a href="contact.html">تماس با ما</a> با پشتیبانی در ارتباط باشید.
+                            </p>
+                        </section>
+
+                        <div class="content-cta">
+                            <h3>با پذیرش قوانین موافقید؟</h3>
+                            <p>حالا می‌تونید با خیال راحت خرید کنید.</p>
+                            <a href="shop.html" class="btn btn--primary">رفتن به فروشگاه</a>
+                        </div>
+
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <a href="index.html" class="logo logo--footer">
+                    <span class="logo__mark">L</span>
+                    <span class="logo__text">لوکس<b>شاپ</b></span>
+                </a>
+                <p class="footer__about">
+                    لوکس‌شاپ یک فروشگاه اینترنتی مدرن با تمرکز بر کیفیت، اصالت کالا
+                    و تجربه خرید لذت‌بخش برای شماست.
+                </p>
+                <div class="footer__social">
+                    <a href="#" aria-label="اینستاگرام">IG</a>
+                    <a href="#" aria-label="تلگرام">TG</a>
+                    <a href="#" aria-label="واتساپ">WA</a>
+                    <a href="#" aria-label="لینکدین">IN</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h3>دسترسی سریع</h3>
+                <ul>
+                    <li><a href="shop.html">فروشگاه</a></li>
+                    <li><a href="about.html">درباره ما</a></li>
+                    <li><a href="contact.html">تماس با ما</a></li>
+                    <li><a href="faq.html">سوالات متداول</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3>خدمات مشتریان</h3>
+                <ul>
+                    <li><a href="order-tracking.html">پیگیری سفارش</a></li>
+                    <li><a href="rules.html">قوانین و مقررات</a></li>
+                    <li><a href="privacy.html">حریم خصوصی</a></li>
+                    <li><a href="returns.html">رویه بازگشت کالا</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3>تماس با ما</h3>
+                <ul class="footer__contact">
+                    <li>📍 تهران، خیابان ولیعصر، پلاک ۱۲۳</li>
+                    <li>📞 ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                    <li>✉️ info@looxshop.ir</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <p>© ۱۴۰۴ لوکس‌شاپ — تمامی حقوق محفوظ است.</p>
+                <div class="footer__badges">
+                    <span>🔒 پرداخت امن</span>
+                    <span>✅ ضمانت اصالت</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="سبد خرید">
+        <div class="cart-drawer__head">
+            <h3>سبد خرید</h3>
+            <button class="icon-btn" id="cartClose" aria-label="بستن سبد خرید">✕</button>
+        </div>
+        <div class="cart-drawer__body" id="cartItems"></div>
+        <div class="cart-drawer__foot">
+            <div class="cart-drawer__total">
+                <span>جمع کل</span>
+                <strong id="cartTotal">۰ تومان</strong>
+            </div>
+            <a href="checkout.html" class="btn btn--primary btn--block">ادامه فرآیند خرید</a>
+        </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">↑</button>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/notifications.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <!-- ===== Basic Meta Tags ===== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#800020" />
+
+  <!-- ===== SEO Meta Tags ===== -->
+  <title>لوکس‌شاپ | فروشگاه اینترنتی مدرن، لاکچری و مطمئن</title>
+  <meta name="description"
+    content="لوکس‌شاپ، فروشگاه اینترنتی مدرن با ارسال سریع، ضمانت اصالت کالا و ۷ روز ضمانت بازگشت. خرید آنلاین انواع کالای دیجیتال، پوشاک، لوازم خانه و اکسسوری." />
+  <meta name="keywords"
+    content="فروشگاه اینترنتی, خرید آنلاین, فروشگاه لوکس, کالای دیجیتال, پوشاک, لوازم خانه, اکسسوری" />
+  <meta name="author" content="LooxShop" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/" />
+
+  <!-- ===== Open Graph ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="لوکس‌شاپ | فروشگاه اینترنتی مدرن و لاکچری" />
+  <meta property="og:description" content="خرید آنلاین با ارسال سریع و ضمانت اصالت کالا." />
+  <meta property="og:image" content="assets/img/hero.jpg" />
+  <meta property="og:url" content="https://example.com/" />
+
+  <!-- ===== Favicon ===== -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>" />
+
+  <!-- ===== Fonts ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- ===== Stylesheet ===== -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================= -->
+  <header class="site-header" id="siteHeader">
+
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <p class="topbar__text">🚚 ارسال رایگان برای خریدهای بالای ۵۰۰ هزار تومان</p>
+        <ul class="topbar__links">
+          <li><a href="order-tracking.html">پیگیری سفارش</a></li>
+          <li><a href="faq.html">سوالات متداول</a></li>
+          <li><a href="contact.html">تماس با ما</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container header-main__inner">
+        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+
+        <a href="index.html" class="logo" aria-label="لوکس‌شاپ">
+          <span class="logo__mark">L</span>
+          <span class="logo__text">لوکس<b>شاپ</b></span>
+        </a>
+
+        <form class="search" id="searchForm" role="search" autocomplete="off">
+          <input type="search" id="searchInput" class="search__input" placeholder="جست‌وجوی محصول، برند یا دسته‌بندی..."
+            aria-label="جست‌وجوی محصول" />
+          <button type="submit" class="search__btn" aria-label="جست‌وجو">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </form>
+
+        <div class="header-actions">
+          <a href="login.html" class="icon-btn account-btn">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round">
+              <circle cx="12" cy="8" r="4"></circle>
+              <path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"></path>
+            </svg>
+            <span class="account-btn__text">ورود / ثبت‌نام</span>
+          </a>
+          <button class="icon-btn cart-btn" id="cartBtn" aria-label="سبد خرید">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="20" r="1.5"></circle>
+              <circle cx="18" cy="20" r="1.5"></circle>
+              <path d="M2 3h3l2.4 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 7H6"></path>
+            </svg>
+            <span class="cart-count" id="cartCount">۰</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="main-nav" id="mainNav" aria-label="منوی اصلی">
+      <div class="container">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link is-active" href="index.html">خانه</a></li>
+          <li class="main-nav__item has-dropdown">
+            <a class="main-nav__link" href="shop.html">
+              دسته‌بندی‌ها
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+            <ul class="dropdown">
+              <li><a href="shop.html?cat=digital">کالای دیجیتال</a></li>
+              <li><a href="shop.html?cat=clothing">پوشاک</a></li>
+              <li><a href="shop.html?cat=home">لوازم خانه</a></li>
+              <li><a href="shop.html?cat=beauty">زیبایی و سلامت</a></li>
+              <li><a href="shop.html?cat=accessories">اکسسوری</a></li>
+            </ul>
+          </li>
+          <li class="main-nav__item"><a class="main-nav__link" href="shop.html">فروشگاه</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="shop.html?sort=discount">تخفیف‌ها 🔥</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="about.html">درباره ما</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="contact.html">تماس با ما</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile slide-in menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__head">
+      <span class="logo"><span class="logo__mark">L</span><span class="logo__text">لوکس<b>شاپ</b></span></span>
+      <button class="icon-btn" id="mobileMenuClose" aria-label="بستن منو">✕</button>
+    </div>
+    <ul class="mobile-menu__list">
+      <li><a href="index.html">خانه</a></li>
+      <li><a href="shop.html">فروشگاه</a></li>
+      <li><a href="shop.html?cat=digital">کالای دیجیتال</a></li>
+      <li><a href="shop.html?cat=clothing">پوشاک</a></li>
+      <li><a href="shop.html?cat=home">لوازم خانه</a></li>
+      <li><a href="shop.html?cat=beauty">زیبایی و سلامت</a></li>
+      <li><a href="shop.html?cat=accessories">اکسسوری</a></li>
+      <li><a href="about.html">درباره ما</a></li>
+      <li><a href="contact.html">تماس با ما</a></li>
+      <li><a href="login.html">ورود / ثبت‌نام</a></li>
+    </ul>
+  </div>
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================= -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__badge">✨ کالکشن جدید ۱۴۰۴ رسید</span>
+          <h1 class="hero__title">
+            خریدی <span class="text-gradient">لاکچری</span><br />
+            با تجربه‌ای متفاوت
+          </h1>
+          <p class="hero__text">
+            هزاران محصول اصل و باکیفیت، ارسال سریع به سراسر کشور،
+            پرداخت امن آنلاین و ۷ روز ضمانت بازگشت کالا.
+          </p>
+
+          <div class="hero__actions">
+            <a href="shop.html" class="btn btn--primary">
+              مشاهده فروشگاه
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+            </a>
+            <a href="#products" class="btn btn--ghost">پیشنهادهای ویژه</a>
+          </div>
+
+          <ul class="hero__stats">
+            <li><strong>+۱۲K</strong><span>مشتری راضی</span></li>
+            <li><strong>+۳K</strong><span>محصول متنوع</span></li>
+            <li><strong>۹۸٪</strong><span>رضایت خرید</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <img src="assets/img/hero.jpg" alt="خرید آنلاین از فروشگاه لوکس‌شاپ" width="900" height="900"
+            loading="eager" />
+          <div class="hero__float-card hero__float-card--1">
+            <span class="dot"></span>
+            <div><strong>ارسال سریع</strong><small>تهران زیر ۳ ساعت</small></div>
+          </div>
+          <div class="hero__float-card hero__float-card--2">
+            <span class="dot dot--rose"></span>
+            <div><strong>ضمانت اصالت</strong><small>۱۰۰٪ اورجینال</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+      <div class="container features__grid">
+        <div class="feature">
+          <div class="feature__icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <h3>ارسال سریع</h3>
+          <p>تحویل درب منزل در کمترین زمان ممکن</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3>پرداخت امن</h3>
+          <p>اتصال به درگاه بانکی معتبر و رمزنگاری‌شده</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="1 4 1 10 7 10"></polyline>
+              <path d="M3.5 15a9 9 0 1 0 2.1-9.4L1 10"></path>
+            </svg>
+          </div>
+          <h3>بازگشت کالا</h3>
+          <p>۷ روز ضمانت بازگشت بدون قید و شرط</p>
+        </div>
+        <div class="feature">
+          <div class="feature__icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </div>
+          <h3>پشتیبانی ۲۴/۷</h3>
+          <p>همیشه در کنار شما، حتی نیمه‌شب</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section categories" id="categories">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="section__eyebrow">دسته‌بندی‌ها</span>
+            <h2 class="section__title">دنبال چی می‌گردی؟</h2>
+          </div>
+          <a href="shop.html" class="link-more">مشاهده همه ←</a>
+        </div>
+
+        <div class="categories__grid">
+          <a href="shop.html?cat=digital" class="category-card">
+            <img src="assets/img/Digital_goods.jpg" alt="کالای دیجیتال" loading="lazy" />
+            <div class="category-card__body">
+              <h3>کالای دیجیتال</h3><span>۲۴۰ محصول</span>
+            </div>
+          </a>
+          <a href="shop.html?cat=clothing" class="category-card">
+            <img src="assets/img/clothing.jpg" alt="پوشاک" loading="lazy" />
+            <div class="category-card__body">
+              <h3>پوشاک</h3><span>۱۸۰ محصول</span>
+            </div>
+          </a>
+          <a href="shop.html?cat=home" class="category-card">
+            <img src="assets/img/Home_Appliances.jpg" alt="لوازم خانه" loading="lazy" />
+            <div class="category-card__body">
+              <h3>لوازم خانه</h3><span>۹۵ محصول</span>
+            </div>
+          </a>
+          <a href="shop.html?cat=beauty" class="category-card">
+            <img src="assets/img/Beauty_Health.jpg" alt="زیبایی و سلامت" loading="lazy" />
+            <div class="category-card__body">
+              <h3>زیبایی و سلامت</h3><span>۷۰ محصول</span>
+            </div>
+          </a>
+          <a href="shop.html?cat=accessories" class="category-card">
+            <img src="assets/img/accessories.jpg" alt="اکسسوری" loading="lazy" />
+            <div class="category-card__body">
+              <h3>اکسسوری</h3><span>۱۲۰ محصول</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="section products" id="products">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="section__eyebrow">فروشگاه</span>
+            <h2 class="section__title">محصولات پرطرفدار</h2>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <div class="toolbar__filters" id="filterBar">
+            <button class="chip is-active" data-filter="all">همه</button>
+            <button class="chip" data-filter="digital">دیجیتال</button>
+            <button class="chip" data-filter="clothing">پوشاک</button>
+            <button class="chip" data-filter="home">لوازم خانه</button>
+            <button class="chip" data-filter="beauty">زیبایی</button>
+            <button class="chip" data-filter="accessories">اکسسوری</button>
+          </div>
+          <div class="toolbar__sort">
+            <label for="sortSelect">مرتب‌سازی:</label>
+            <select id="sortSelect">
+              <option value="default">پیش‌فرض</option>
+              <option value="cheap">ارزان‌ترین</option>
+              <option value="expensive">گران‌ترین</option>
+              <option value="popular">محبوب‌ترین</option>
+              <option value="newest">جدیدترین</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Products grid -->
+        <div class="products__grid" id="productsGrid">
+
+          <!-- Product 1 : هدفون -->
+          <article class="product-card" data-id="p1" data-category="digital" data-price="4850000" data-rating="4.8"
+            data-date="8" data-name="هدفون بی‌سیم لوکس">
+            <div class="product-card__media">
+              <span class="badge badge--sale">۱۸٪ تخفیف</span>
+              <a href="product.html?id=p1" class="product-card__link" aria-label="مشاهده هدفون بی‌سیم لوکس">
+                <img src="assets/img/Wireless_headphones.jpg" alt="هدفون بی‌سیم لوکس" loading="lazy" />
+              </a>
+              <div class="product-card__actions">
+                <button class="icon-btn wishlist-btn" aria-label="افزودن به علاقه‌مندی">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21.2l7.7-7.8 1.1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="icon-btn quick-view-btn" aria-label="مشاهده سریع">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">کالای دیجیتال</span>
+              <a href="product.html?id=p1" class="product-card__link">
+                <h3 class="product-card__title">هدفون بی‌سیم لوکس</h3>
+              </a>
+              <div class="product-card__rating">★ <span>۴.۸</span> (۱۲۴ نظر)</div>
+              <div class="product-card__price">
+                <del>۵,۹۰۰,۰۰۰</del>
+                <strong>۴,۸۵۰,۰۰۰ <small>تومان</small></strong>
+              </div>
+              <button class="btn btn--primary btn--block add-to-cart" data-id="p1" data-name="هدفون بی‌سیم لوکس"
+                data-price="4850000" data-image="assets/img/Wireless_headphones.jpg">افزودن به سبد</button>
+            </div>
+          </article>
+
+          <!-- Product 2 : ساعت -->
+          <article class="product-card" data-id="p2" data-category="digital" data-price="8200000" data-rating="4.9"
+            data-date="10" data-name="ساعت هوشمند سری ۹">
+            <div class="product-card__media">
+              <span class="badge badge--new">جدید</span>
+              <a href="product.html?id=p2" class="product-card__link" aria-label="مشاهده ساعت هوشمند سری ۹">
+                <img src="assets/img/Series_9_Smartwatch.jpg" alt="ساعت هوشمند سری ۹" loading="lazy" />
+              </a>
+              <div class="product-card__actions">
+                <button class="icon-btn wishlist-btn" aria-label="افزودن به علاقه‌مندی">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21.2l7.7-7.8 1.1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="icon-btn quick-view-btn" aria-label="مشاهده سریع">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">کالای دیجیتال</span>
+              <a href="product.html?id=p2" class="product-card__link">
+                <h3 class="product-card__title">ساعت هوشمند سری ۹</h3>
+              </a>
+              <div class="product-card__rating">★ <span>۴.۹</span> (۸۶ نظر)</div>
+              <div class="product-card__price"><strong>۸,۲۰۰,۰۰۰ <small>تومان</small></strong></div>
+              <button class="btn btn--primary btn--block add-to-cart" data-id="p2" data-name="ساعت هوشمند سری ۹"
+                data-price="8200000" data-image="assets/img/Series_9_Smartwatch.jpg">افزودن به سبد</button>
+            </div>
+          </article>
+
+          <!-- Product 3 : عطر -->
+          <article class="product-card" data-id="p3" data-category="beauty" data-price="2450000" data-rating="4.6"
+            data-date="5" data-name="عطر مردانه رویال">
+            <div class="product-card__media">
+              <a href="product.html?id=p3" class="product-card__link" aria-label="مشاهده عطر مردانه رویال">
+                <img src="assets/img/Royal_men's_perfume.jpg" alt="عطر مردانه رویال" loading="lazy" />
+              </a>
+              <div class="product-card__actions">
+                <button class="icon-btn wishlist-btn" aria-label="افزودن به علاقه‌مندی">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21.2l7.7-7.8 1.1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="icon-btn quick-view-btn" aria-label="مشاهده سریع">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">زیبایی و سلامت</span>
+              <a href="product.html?id=p3" class="product-card__link">
+                <h3 class="product-card__title">عطر مردانه رویال</h3>
+              </a>
+              <div class="product-card__rating">★ <span>۴.۶</span> (۵۴ نظر)</div>
+              <div class="product-card__price"><strong>۲,۴۵۰,۰۰۰ <small>تومان</small></strong></div>
+              <button class="btn btn--primary btn--block add-to-cart" data-id="p3" data-name="عطر مردانه رویال"
+                data-price="2450000" data-image="assets/img/Royal_men's_perfume.jpg">افزودن به سبد</button>
+            </div>
+          </article>
+
+          <!-- Product 4 : کیف -->
+          <article class="product-card" data-id="p4" data-category="accessories" data-price="3150000" data-rating="4.7"
+            data-date="6" data-name="کیف چرم دست‌دوز">
+            <div class="product-card__media">
+              <span class="badge badge--sale">۲۰٪ تخفیف</span>
+              <a href="product.html?id=p4" class="product-card__link" aria-label="مشاهده کیف چرم دست‌دوز">
+                <img src="assets/img/Leather_bag.jpg" alt="کیف چرم دست‌دوز" loading="lazy" />
+              </a>
+              <div class="product-card__actions">
+                <button class="icon-btn wishlist-btn" aria-label="افزودن به علاقه‌مندی">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21.2l7.7-7.8 1.1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="icon-btn quick-view-btn" aria-label="مشاهده سریع">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">اکسسوری</span>
+              <a href="product.html?id=p4" class="product-card__link">
+                <h3 class="product-card__title">کیف چرم دست‌دوز</h3>
+              </a>
+              <div class="product-card__rating">★ <span>۴.۷</span> (۷۲ نظر)</div>
+              <div class="product-card__price">
+                <del>۳,۹۰۰,۰۰۰</del>
+                <strong>۳,۱۵۰,۰۰۰ <small>تومان</small></strong>
+              </div>
+              <button class="btn btn--primary btn--block add-to-cart" data-id="p4" data-name="کیف چرم دست‌دوز"
+                data-price="3150000" data-image="assets/img/Leather_bag.jpg">افزودن به سبد</button>
+            </div>
+          </article>
+
+          <!-- Product 5 : کاپشن -->
+          <article class="product-card" data-id="p5" data-category="clothing" data-price="4300000" data-rating="4.5"
+            data-date="9" data-name="کاپشن زمستانی پرمیوم">
+            <div class="product-card__media">
+              <span class="badge badge--new">جدید</span>
+              <a href="product.html?id=p5" class="product-card__link" aria-label="مشاهده کاپشن زمستانی پرمیوم">
+                <img src="assets/img/Winter_jacket.jpg" alt="کاپشن زمستانی پرمیوم" loading="lazy" />
+              </a>
+              <div class="product-card__actions">
+                <button class="icon-btn wishlist-btn" aria-label="افزودن به علاقه‌مندی">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21.2l7.7-7.8 1.1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="icon-btn quick-view-btn" aria-label="مشاهده سریع">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">پوشاک</span>
+              <a href="product.html?id=p5" class="product-card__link">
+                <h3 class="product-card__title">کاپشن زمستانی پرمیوم</h3>
+              </a>
+              <div class="product-card__rating">★ <span>۴.۵</span> (۴۱ نظر)</div>
+              <div class="product-card__price"><strong>۴,۳۰۰,۰۰۰ <small>تومان</small></strong></div>
+              <button class="btn btn--primary btn--block add-to-cart" data-id="p5" data-name="کاپشن زمستانی پرمیوم"
+                data-price="4300000" data-image="assets/img/Winter_jacket.jpg">افزودن به سبد</button>
+            </div>
+          </article>
+
+          <!-- Product 6 : چراغ -->
+          <article class="product-card" data-id="p6" data-category="home" data-price="1850000" data-rating="4.4"
+            data-date="3" data-name="چراغ رومیزی مینیمال">
+            <div class="product-card__media">
+              <a href="product.html?id=p6" class="product-card__link" aria-label="مشاهده چراغ رومیزی مینیمال">
+                <img src="assets/img/Minimalist_tableLamp.jpg" alt="چراغ رومیزی مینیمال" loading="lazy" />
+              </a>
+              <div class="product-card__actions">
+                <button class="icon-btn wishlist-btn" aria-label="افزودن به علاقه‌مندی">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21.2l7.7-7.8 1.1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="icon-btn quick-view-btn" aria-label="مشاهده سریع">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">لوازم خانه</span>
+              <a href="product.html?id=p6" class="product-card__link">
+                <h3 class="product-card__title">چراغ رومیزی مینیمال</h3>
+              </a>
+              <div class="product-card__rating">★ <span>۴.۴</span> (۳۳ نظر)</div>
+              <div class="product-card__price"><strong>۱,۸۵۰,۰۰۰ <small>تومان</small></strong></div>
+              <button class="btn btn--primary btn--block add-to-cart" data-id="p6" data-name="چراغ رومیزی مینیمال"
+                data-price="1850000" data-image="assets/img/Minimalist_tableLamp.jpg">افزودن به سبد</button>
+            </div>
+          </article>
+
+          <!-- Product 7 : اسپیکر -->
+          <article class="product-card" data-id="p7" data-category="digital" data-price="3600000" data-rating="4.7"
+            data-date="7" data-name="اسپیکر بلوتوثی پرتابل">
+            <div class="product-card__media">
+              <a href="product.html?id=p7" class="product-card__link" aria-label="مشاهده اسپیکر بلوتوثی پرتابل">
+                <img src="assets/img/Bluetooth_speaker.jpg" alt="اسپیکر بلوتوثی پرتابل" loading="lazy" />
+              </a>
+              <div class="product-card__actions">
+                <button class="icon-btn wishlist-btn" aria-label="افزودن به علاقه‌مندی">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21.2l7.7-7.8 1.1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="icon-btn quick-view-btn" aria-label="مشاهده سریع">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">کالای دیجیتال</span>
+              <a href="product.html?id=p7" class="product-card__link">
+                <h3 class="product-card__title">اسپیکر بلوتوثی پرتابل</h3>
+              </a>
+              <div class="product-card__rating">★ <span>۴.۷</span> (۶۸ نظر)</div>
+              <div class="product-card__price"><strong>۳,۶۰۰,۰۰۰ <small>تومان</small></strong></div>
+              <button class="btn btn--primary btn--block add-to-cart" data-id="p7" data-name="اسپیکر بلوتوثی پرتابل"
+                data-price="3600000" data-image="assets/img/Bluetooth_speaker.jpg">افزودن به سبد</button>
+            </div>
+          </article>
+
+          <!-- Product 8 : ست فنجان -->
+          <article class="product-card" data-id="p8" data-category="home" data-price="980000" data-rating="4.3"
+            data-date="2" data-name="ست فنجان سرامیکی">
+            <div class="product-card__media">
+              <span class="badge badge--sale">۱۵٪ تخفیف</span>
+              <a href="product.html?id=p8" class="product-card__link" aria-label="مشاهده ست فنجان سرامیکی">
+                <img src="assets/img/Set_of_six_cups.jpg" alt="ست فنجان سرامیکی" loading="lazy" />
+              </a>
+              <div class="product-card__actions">
+                <button class="icon-btn wishlist-btn" aria-label="افزودن به علاقه‌مندی">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21.2l7.7-7.8 1.1-1a5.5 5.5 0 0 0 0-7.8z">
+                    </path>
+                  </svg>
+                </button>
+                <button class="icon-btn quick-view-btn" aria-label="مشاهده سریع">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-card__body">
+              <span class="product-card__cat">لوازم خانه</span>
+              <a href="product.html?id=p8" class="product-card__link">
+                <h3 class="product-card__title">ست فنجان سرامیکی</h3>
+              </a>
+              <div class="product-card__rating">★ <span>۴.۳</span> (۲۹ نظر)</div>
+              <div class="product-card__price">
+                <del>۱,۱۵۰,۰۰۰</del>
+                <strong>۹۸۰,۰۰۰ <small>تومان</small></strong>
+              </div>
+              <button class="btn btn--primary btn--block add-to-cart" data-id="p8" data-name="ست فنجان سرامیکی"
+                data-price="980000" data-image="assets/img/Set_of_six_cups.jpg">افزودن به سبد</button>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="empty-state" id="emptyState" hidden>محصولی با این مشخصات پیدا نشد 😕</p>
+
+        <div class="products__more">
+          <a href="shop.html" class="btn btn--outline">مشاهده همه محصولات</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFER BANNER -->
+    <section class="section offer">
+      <div class="container">
+        <div class="offer__box">
+          <div class="offer__content">
+            <span class="offer__eyebrow">پیشنهاد شگفت‌انگیز</span>
+            <h2>تا ۴۰٪ تخفیف روی کالکشن پاییزه</h2>
+            <p>فقط تا پایان زمان باقی‌مانده فرصت داری!</p>
+            <div class="countdown" id="countdown">
+              <div class="countdown__item"><strong id="cdDays">۰۰</strong><span>روز</span></div>
+              <div class="countdown__item"><strong id="cdHours">۰۰</strong><span>ساعت</span></div>
+              <div class="countdown__item"><strong id="cdMinutes">۰۰</strong><span>دقیقه</span></div>
+              <div class="countdown__item"><strong id="cdSeconds">۰۰</strong><span>ثانیه</span></div>
+            </div>
+            <a href="shop.html?sort=discount" class="btn btn--light">همین حالا خرید کن</a>
+          </div>
+          <div class="offer__media">
+            <img src="assets/img/offer-bg.jpg" alt="پیشنهاد ویژه فروشگاه" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="section newsletter">
+      <div class="container">
+        <div class="newsletter__box">
+          <div class="newsletter__text">
+            <h2>اول از همه باخبر شو!</h2>
+            <p>با عضویت در خبرنامه، تخفیف‌های ویژه و کدهای اختصاصی رو مستقیم دریافت کن.</p>
+          </div>
+          <form class="newsletter__form" id="newsletterForm">
+            <input type="email" id="newsletterEmail" placeholder="ایمیل خود را وارد کنید" required aria-label="ایمیل" />
+            <button type="submit" class="btn btn--primary">عضویت</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================= -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__col">
+        <a href="index.html" class="logo logo--footer">
+          <span class="logo__mark">L</span>
+          <span class="logo__text">لوکس<b>شاپ</b></span>
+        </a>
+        <p class="footer__about">
+          لوکس‌شاپ یک فروشگاه اینترنتی مدرن با تمرکز بر کیفیت، اصالت کالا
+          و تجربه خرید لذت‌بخش برای شماست.
+        </p>
+        <div class="footer__social">
+          <a href="#" aria-label="اینستاگرام">IG</a>
+          <a href="#" aria-label="تلگرام">TG</a>
+          <a href="#" aria-label="واتساپ">WA</a>
+          <a href="#" aria-label="لینکدین">IN</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h3>دسترسی سریع</h3>
+        <ul>
+          <li><a href="shop.html">فروشگاه</a></li>
+          <li><a href="about.html">درباره ما</a></li>
+          <li><a href="contact.html">تماس با ما</a></li>
+          <li><a href="faq.html">سوالات متداول</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>خدمات مشتریان</h3>
+        <ul>
+          <li><a href="order-tracking.html">پیگیری سفارش</a></li>
+          <li><a href="rules.html">قوانین و مقررات</a></li>
+          <li><a href="privacy.html">حریم خصوصی</a></li>
+          <li><a href="returns.html">رویه بازگشت کالا</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>تماس با ما</h3>
+        <ul class="footer__contact">
+          <li>📍 تهران، خیابان ولیعصر، پلاک ۱۲۳</li>
+          <li>📞 ۰۲۱-۱۲۳۴۵۶۷۸</li>
+          <li>✉️ info@looxshop.ir</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>© ۱۴۰۴ لوکس‌شاپ — تمامی حقوق محفوظ است.</p>
+        <div class="footer__badges">
+          <span>🔒 پرداخت امن</span>
+          <span>✅ ضمانت اصالت</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="سبد خرید">
+    <div class="cart-drawer__head">
+      <h3>سبد خرید</h3>
+      <button class="icon-btn" id="cartClose" aria-label="بستن سبد خرید">✕</button>
+    </div>
+    <div class="cart-drawer__body" id="cartItems"></div>
+    <div class="cart-drawer__foot">
+      <div class="cart-drawer__total">
+        <span>جمع کل</span>
+        <strong id="cartTotal">۰ تومان</strong>
+      </div>
+      <a href="checkout.html" class="btn btn--primary btn--block">ادامه فرآیند خرید</a>
+    </div>
+  </aside>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">↑</button>
+  
+  <!-- scripts -->
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/notifications.js"></script>
+  <script src="assets/js/product-render.js"></script>
+</body>
+
+</html>

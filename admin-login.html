@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#800020" />
+    <title>ورود مدیران | لوکس‌شاپ</title>
+    <meta name="robots" content="noindex, nofollow" />
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/admin.css" />
+</head>
+
+<body class="admin-login-body">
+
+    <div class="admin-login-wrap">
+
+        <a href="index.html" class="admin-login-back">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            بازگشت به فروشگاه
+        </a>
+
+        <div class="admin-login-card">
+
+            <div class="admin-login-card__icon">
+                <svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <path d="M9 12l2 2 4-4"></path>
+                </svg>
+            </div>
+
+            <h1 class="admin-login-card__title">ورود به پنل مدیریت</h1>
+            <p class="admin-login-card__subtitle">
+                این بخش مخصوص مدیران فروشگاه است. لطفاً اطلاعات ورود خود را وارد کنید.
+            </p>
+
+            <div class="auth-alert" id="adminAlert" hidden></div>
+
+            <form class="auth-form" id="adminLoginForm" novalidate autocomplete="on">
+
+                <div class="auth-field">
+                    <label for="adminEmail">ایمیل مدیر</label>
+                    <div class="auth-input-wrap">
+                        <span class="auth-input-icon">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </span>
+                        <input type="email" id="adminEmail" name="email" placeholder="admin@looxshop.ir" required
+                            autocomplete="username" spellcheck="false" />
+                    </div>
+                </div>
+
+                <div class="auth-field">
+                    <label for="adminPassword">رمز عبور</label>
+                    <div class="auth-input-wrap">
+                        <span class="auth-input-icon">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </span>
+                        <input type="password" id="adminPassword" name="password" placeholder="رمز عبور" required
+                            autocomplete="current-password" />
+                        <button type="button" class="auth-toggle-pass" data-target="adminPassword"
+                            aria-label="نمایش رمز عبور">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="auth-row">
+                    <label class="auth-checkbox">
+                        <input type="checkbox" id="adminRemember" />
+                        <span>مرا به خاطر بسپار</span>
+                    </label>
+                    <a href="forgot-password.html" class="auth-link">فراموشی رمز؟</a>
+                </div>
+
+                <button type="submit" class="btn btn--primary auth-submit" id="adminSubmitBtn">
+                    <span>ورود به پنل</span>
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </button>
+
+            </form>
+
+            <div class="admin-login-card__hint">
+                <strong>🔑 اطلاعات ورود دمو:</strong><br />
+                ایمیل: <code>admin@looxshop.ir</code><br />
+                رمز: <code>admin1234</code>
+            </div>
+
+            <div class="admin-login-card__trust">
+                <span>🔒 اتصال امن</span>
+                <span>•</span>
+                <span>🛡️ فقط ادمین‌ها</span>
+                <span>•</span>
+                <span>⚡ ورود سریع</span>
+            </div>
+
+        </div>
+
+        <p class="admin-login-copyright">
+            © ۱۴۰۳ لوکس‌شاپ — تمامی حقوق محفوظ است
+        </p>
+
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="assets/js/admin-login.js"></script>
+</body>
+
+</html>

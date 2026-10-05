@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#800020" />
+
+    <title>ثبت‌نام | لوکس‌شاپ</title>
+    <meta name="description" content="ثبت‌نام در فروشگاه لوکس‌شاپ. خرید سریع‌تر، پیگیری سفارش و تخفیف‌های ویژه." />
+    <meta name="robots" content="noindex, follow" />
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="auth-body">
+
+    <header class="auth-header">
+        <div class="container auth-header__inner">
+            <a href="index.html" class="logo" aria-label="لوکس‌شاپ">
+                <span class="logo__mark">L</span>
+                <span class="logo__text">لوکس<b>شاپ</b></span>
+            </a>
+
+            <a href="index.html" class="btn btn--outline auth-header__back">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                    stroke-width="2.5" stroke-linecap="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                بازگشت به فروشگاه
+            </a>
+        </div>
+    </header>
+
+    <main class="auth-main">
+        <div class="container">
+            <div class="auth-layout">
+
+                <!-- Visual side -->
+                <div class="auth-visual auth-visual--register">
+                    <div class="auth-visual__bg"></div>
+                    <div class="auth-visual__content">
+                        <h2 class="auth-visual__title">
+                            عضویت در <span class="text-gradient">لوکس‌شاپ</span>
+                        </h2>
+                        <p class="auth-visual__text">
+                            با ثبت‌نام در کمتر از ۳۰ ثانیه، به دنیایی از امکانات دسترسی داشته باشید:
+                        </p>
+
+                        <ul class="auth-visual__list">
+                            <li>
+                                <span class="auth-visual__check">✓</span>
+                                دسترسی به تخفیف‌های ویژه اعضا
+                            </li>
+                            <li>
+                                <span class="auth-visual__check">✓</span>
+                                ذخیره آدرس و اطلاعات برای خریدهای بعدی
+                            </li>
+                            <li>
+                                <span class="auth-visual__check">✓</span>
+                                پیگیری لحظه‌ای سفارش‌ها
+                            </li>
+                            <li>
+                                <span class="auth-visual__check">✓</span>
+                                پشتیبانی اختصاصی
+                            </li>
+                        </ul>
+
+                        <div class="auth-visual__stat">
+                            <strong>۹۸٪</strong>
+                            <span>رضایت کاربران</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form side -->
+                <div class="auth-form-side">
+                    <div class="auth-card">
+                        <div class="auth-card__head">
+                            <h1 class="auth-card__title">ساخت حساب کاربری</h1>
+                            <p class="auth-card__subtitle">
+                                اطلاعات خود را وارد کنید تا حساب کاربری بسازید.
+                            </p>
+                        </div>
+
+                        <div class="auth-alert" id="authAlert" hidden></div>
+
+                        <form class="auth-form" id="registerForm" novalidate>
+                            <!-- Full name -->
+                            <div class="auth-field">
+                                <label for="regName">نام و نام خانوادگی</label>
+                                <div class="auth-input-wrap">
+                                    <span class="auth-input-icon">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                            <circle cx="12" cy="8" r="4"></circle>
+                                            <path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"></path>
+                                        </svg>
+                                    </span>
+                                    <input type="text" id="regName" placeholder="مثلاً علی رضایی" required />
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="auth-field">
+                                <label for="regEmail">ایمیل</label>
+                                <div class="auth-input-wrap">
+                                    <span class="auth-input-icon">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                            <polyline points="22,6 12,13 2,6"></polyline>
+                                        </svg>
+                                    </span>
+                                    <input type="email" id="regEmail" placeholder="example@mail.com" required />
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="auth-field">
+                                <label for="regPhone">شماره موبایل</label>
+                                <div class="auth-input-wrap">
+                                    <span class="auth-input-icon">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                        </svg>
+                                    </span>
+                                    <input type="tel" id="regPhone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required />
+                                </div>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="auth-field">
+                                <label for="regPassword">رمز عبور</label>
+                                <div class="auth-input-wrap">
+                                    <span class="auth-input-icon">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <rect x="3" y="11" width="18" height="11" rx="2"></rect>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg>
+                                    </span>
+                                    <input type="password" id="regPassword" placeholder="حداقل ۶ کاراکتر"
+                                        required minlength="6" />
+                                    <button type="button" class="auth-toggle-pass" data-target="regPassword"
+                                        aria-label="نمایش رمز">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Confirm Password (now with eye icon) -->
+                            <div class="auth-field">
+                                <label for="regPassword2">تکرار رمز عبور</label>
+                                <div class="auth-input-wrap">
+                                    <span class="auth-input-icon">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <rect x="3" y="11" width="18" height="11" rx="2"></rect>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg>
+                                    </span>
+                                    <input type="password" id="regPassword2" placeholder="تکرار رمز عبور" required />
+                                    <button type="button" class="auth-toggle-pass" data-target="regPassword2"
+                                        aria-label="نمایش رمز">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Terms -->
+                            <label class="auth-checkbox auth-checkbox--terms">
+                                <input type="checkbox" id="regTerms" required />
+                                <span>
+                                    <a href="rules.html" class="auth-link">قوانین و مقررات</a> و
+                                    <a href="privacy.html" class="auth-link">حریم خصوصی</a>
+                                    را می‌پذیرم.
+                                </span>
+                            </label>
+
+                            <!-- Submit -->
+                            <button type="submit" class="btn btn--primary auth-submit">
+                                ساخت حساب کاربری
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                </svg>
+                            </button>
+                        </form>
+
+                        <p class="auth-switch">
+                            قبلاً ثبت‌نام کرده‌اید؟
+                            <a href="login.html" class="auth-link auth-link--bold">وارد شوید</a>
+                        </p>
+                    </div>
+
+                    <div class="auth-trust">
+                        <span>🔒 اطلاعات شما امن است</span>
+                        <span>✅ تضمین بازگشت ۷ روزه</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#800020" />
+
+    <title>سبد خرید | لوکس‌شاپ</title>
+    <meta name="description"
+        content="مشاهده و ویرایش سبد خرید، اعمال کد تخفیف و ادامه فرآیند خرید در فروشگاه لوکس‌شاپ." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href="https://example.com/cart.html" />
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="topbar">
+            <div class="container topbar__inner">
+                <p class="topbar__text">🚚 ارسال رایگان برای خریدهای بالای ۵۰۰ هزار تومان</p>
+                <ul class="topbar__links">
+                    <li><a href="order-tracking.html">پیگیری سفارش</a></li>
+                    <li><a href="faq.html">سوالات متداول</a></li>
+                    <li><a href="contact.html">تماس با ما</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="container header-main__inner">
+                <button class="icon-btn menu-toggle" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+
+                <a href="index.html" class="logo" aria-label="لوکس‌شاپ">
+                    <span class="logo__mark">L</span>
+                    <span class="logo__text">لوکس<b>شاپ</b></span>
+                </a>
+
+                <form class="search" id="searchForm" role="search" autocomplete="off">
+                    <input type="search" id="searchInput" class="search__input"
+                        placeholder="جست‌وجوی محصول، برند یا دسته‌بندی..." aria-label="جست‌وجوی محصول" />
+                    <button type="submit" class="search__btn" aria-label="جست‌وجو">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="header-actions">
+                    <a href="login.html" class="icon-btn account-btn">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <circle cx="12" cy="8" r="4"></circle>
+                            <path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"></path>
+                        </svg>
+                        <span class="account-btn__text">ورود / ثبت‌نام</span>
+                    </a>
+                    <button class="icon-btn cart-btn" id="cartBtn" aria-label="سبد خرید">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="20" r="1.5"></circle>
+                            <circle cx="18" cy="20" r="1.5"></circle>
+                            <path d="M2 3h3l2.4 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 7H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">۰</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav" id="mainNav" aria-label="منوی اصلی">
+            <div class="container">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a class="main-nav__link" href="index.html">خانه</a></li>
+                    <li class="main-nav__item has-dropdown">
+                        <a class="main-nav__link" href="shop.html">
+                            دسته‌بندی‌ها
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="shop.html?cat=digital">کالای دیجیتال</a></li>
+                            <li><a href="shop.html?cat=clothing">پوشاک</a></li>
+                            <li><a href="shop.html?cat=home">لوازم خانه</a></li>
+                            <li><a href="shop.html?cat=beauty">زیبایی و سلامت</a></li>
+                            <li><a href="shop.html?cat=accessories">اکسسوری</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="shop.html">فروشگاه</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="shop.html?sort=discount">تخفیف‌ها 🔥</a>
+                    </li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="about.html">درباره ما</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="contact.html">تماس با ما</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu__head">
+            <span class="logo"><span class="logo__mark">L</span><span class="logo__text">لوکس<b>شاپ</b></span></span>
+            <button class="icon-btn" id="mobileMenuClose" aria-label="بستن منو">✕</button>
+        </div>
+        <ul class="mobile-menu__list">
+            <li><a href="index.html">خانه</a></li>
+            <li><a href="shop.html">فروشگاه</a></li>
+            <li><a href="shop.html?cat=digital">کالای دیجیتال</a></li>
+            <li><a href="shop.html?cat=clothing">پوشاک</a></li>
+            <li><a href="shop.html?cat=home">لوازم خانه</a></li>
+            <li><a href="shop.html?cat=beauty">زیبایی و سلامت</a></li>
+            <li><a href="shop.html?cat=accessories">اکسسوری</a></li>
+            <li><a href="about.html">درباره ما</a></li>
+            <li><a href="contact.html">تماس با ما</a></li>
+            <li><a href="login.html">ورود / ثبت‌نام</a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN -->
+    <main>
+
+        <section class="page-head page-head--sm">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="مسیر صفحه">
+                    <a href="index.html">خانه</a>
+                    <span>/</span>
+                    <span class="breadcrumb__current">سبد خرید</span>
+                </nav>
+                <div class="page-head__row">
+                    <div>
+                        <h1 class="page-head__title">سبد خرید</h1>
+                        <p class="page-head__desc">محصولات انتخابی خود را بررسی و نهایی کنید</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cart-page">
+            <div class="container">
+
+                <!-- Cart items -->
+                <div class="cart-layout">
+
+                    <div class="cart-main">
+                        <div class="cart-table-head">
+                            <span>محصول</span>
+                            <span>قیمت واحد</span>
+                            <span>تعداد</span>
+                            <span>جمع</span>
+                            <span></span>
+                        </div>
+
+                        <div id="cartPageItems" class="cart-page-items">
+                            <!-- Items injected by JS -->
+                        </div>
+
+                        <!-- Empty state -->
+                        <div id="cartEmpty" class="cart-empty-page" hidden>
+                            <div class="cart-empty-page__icon">🛒</div>
+                            <h2>سبد خرید شما خالی است</h2>
+                            <p>هنوز محصولی به سبد اضافه نکرده‌اید. به فروشگاه سر بزنید و اولین خریدتان را انجام دهید.
+                            </p>
+                            <a href="shop.html" class="btn btn--primary">رفتن به فروشگاه</a>
+                        </div>
+
+                        <div class="cart-actions-row">
+                            <a href="shop.html" class="btn btn--outline">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round">
+                                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                                    <polyline points="12 19 5 12 12 5"></polyline>
+                                </svg>
+                                ادامه خرید
+                            </a>
+                            <button class="btn btn--ghost" id="clearCartBtn">خالی کردن سبد</button>
+                        </div>
+                    </div>
+
+                    <!-- Summary sidebar -->
+                    <aside class="cart-summary" id="cartSummary">
+                        <h2 class="cart-summary__title">خلاصه سفارش</h2>
+
+                        <div class="cart-summary__row">
+                            <span>جمع کل کالاها</span>
+                            <strong id="summarySubtotal">۰ تومان</strong>
+                        </div>
+
+                        <div class="cart-summary__row">
+                            <span>هزینه ارسال</span>
+                            <strong id="summaryShipping">—</strong>
+                        </div>
+
+                        <!-- Coupon -->
+                        <div class="cart-coupon">
+                            <label for="couponInput">کد تخفیف</label>
+                            <div class="cart-coupon__row">
+                                <input type="text" id="couponInput" placeholder="مثلاً LOOX10" />
+                                <button class="btn btn--outline" id="applyCouponBtn">اعمال</button>
+                            </div>
+                            <p class="cart-coupon__hint" id="couponHint"></p>
+                        </div>
+
+                        <div class="cart-summary__row cart-summary__row--discount" id="discountRow" hidden>
+                            <span>تخفیف</span>
+                            <strong id="summaryDiscount">—</strong>
+                        </div>
+
+                        <div class="cart-summary__divider"></div>
+
+                        <div class="cart-summary__total">
+                            <span>مبلغ قابل پرداخت</span>
+                            <strong id="summaryTotal">۰ تومان</strong>
+                        </div>
+
+                        <a href="checkout.html" class="btn btn--primary btn--block cart-summary__cta">
+                            ادامه فرآیند خرید
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round">
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                        </a>
+
+                        <ul class="cart-summary__trust">
+                            <li>✅ ضمانت اصالت کالا</li>
+                            <li>🔒 پرداخت امن آنلاین</li>
+                            <li>🚚 ارسال سریع</li>
+                        </ul>
+                    </aside>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <a href="index.html" class="logo logo--footer">
+                    <span class="logo__mark">L</span>
+                    <span class="logo__text">لوکس<b>شاپ</b></span>
+                </a>
+                <p class="footer__about">
+                    لوکس‌شاپ یک فروشگاه اینترنتی مدرن با تمرکز بر کیفیت، اصالت کالا
+                    و تجربه خرید لذت‌بخش برای شماست.
+                </p>
+                <div class="footer__social">
+                    <a href="#" aria-label="اینستاگرام">IG</a>
+                    <a href="#" aria-label="تلگرام">TG</a>
+                    <a href="#" aria-label="واتساپ">WA</a>
+                    <a href="#" aria-label="لینکدین">IN</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h3>دسترسی سریع</h3>
+                <ul>
+                    <li><a href="shop.html">فروشگاه</a></li>
+                    <li><a href="about.html">درباره ما</a></li>
+                    <li><a href="contact.html">تماس با ما</a></li>
+                    <li><a href="faq.html">سوالات متداول</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3>خدمات مشتریان</h3>
+                <ul>
+                    <li><a href="order-tracking.html">پیگیری سفارش</a></li>
+                    <li><a href="rules.html">قوانین و مقررات</a></li>
+                    <li><a href="privacy.html">حریم خصوصی</a></li>
+                    <li><a href="returns.html">رویه بازگشت کالا</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3>تماس با ما</h3>
+                <ul class="footer__contact">
+                    <li>📍 تهران، خیابان ولیعصر، پلاک ۱۲۳</li>
+                    <li>📞 ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                    <li>✉️ info@looxshop.ir</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <p>© ۱۴۰۴ لوکس‌شاپ — تمامی حقوق محفوظ است.</p>
+                <div class="footer__badges">
+                    <span>🔒 پرداخت امن</span>
+                    <span>✅ ضمانت اصالت</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART DRAWER (still present for other pages) -->
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="سبد خرید">
+        <div class="cart-drawer__head">
+            <h3>سبد خرید</h3>
+            <button class="icon-btn" id="cartClose" aria-label="بستن سبد خرید">✕</button>
+        </div>
+        <div class="cart-drawer__body" id="cartItems"></div>
+        <div class="cart-drawer__foot">
+            <div class="cart-drawer__total">
+                <span>جمع کل</span>
+                <strong id="cartTotal">۰ تومان</strong>
+            </div>
+            <a href="checkout.html" class="btn btn--primary btn--block">ادامه فرآیند خرید</a>
+        </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">↑</button>
+
+    <script src="assets/js/sync.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/notifications.js"></script>
+</body>
+
+</html>

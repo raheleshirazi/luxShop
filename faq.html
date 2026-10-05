@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#800020" />
+
+    <title>سوالات متداول | لوکس‌شاپ</title>
+    <meta name="description"
+        content="پاسخ سوالات پرتکرار درباره خرید، پرداخت، ارسال و بازگشت کالا در فروشگاه لوکس‌شاپ." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://example.com/faq.html" />
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <header class="site-header" id="siteHeader">
+        <div class="topbar">
+            <div class="container topbar__inner">
+                <p class="topbar__text">🚚 ارسال رایگان برای خریدهای بالای ۵۰۰ هزار تومان</p>
+                <ul class="topbar__links">
+                    <li><a href="order-tracking.html">پیگیری سفارش</a></li>
+                    <li><a href="faq.html">سوالات متداول</a></li>
+                    <li><a href="contact.html">تماس با ما</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="container header-main__inner">
+                <button class="icon-btn menu-toggle" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+
+                <a href="index.html" class="logo" aria-label="لوکس‌شاپ">
+                    <span class="logo__mark">L</span>
+                    <span class="logo__text">لوکس<b>شاپ</b></span>
+                </a>
+
+                <form class="search" id="searchForm" role="search" autocomplete="off">
+                    <input type="search" id="searchInput" class="search__input"
+                        placeholder="جست‌وجوی محصول، برند یا دسته‌بندی..." aria-label="جست‌وجوی محصول" />
+                    <button type="submit" class="search__btn" aria-label="جست‌وجو">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="header-actions">
+                    <a href="login.html" class="icon-btn account-btn">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <circle cx="12" cy="8" r="4"></circle>
+                            <path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"></path>
+                        </svg>
+                        <span class="account-btn__text">ورود / ثبت‌نام</span>
+                    </a>
+                    <button class="icon-btn cart-btn" id="cartBtn" aria-label="سبد خرید">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="20" r="1.5"></circle>
+                            <circle cx="18" cy="20" r="1.5"></circle>
+                            <path d="M2 3h3l2.4 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 7H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">۰</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav" id="mainNav" aria-label="منوی اصلی">
+            <div class="container">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a class="main-nav__link" href="index.html">خانه</a></li>
+                    <li class="main-nav__item has-dropdown">
+                        <a class="main-nav__link" href="shop.html">
+                            دسته‌بندی‌ها
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="shop.html?cat=digital">کالای دیجیتال</a></li>
+                            <li><a href="shop.html?cat=clothing">پوشاک</a></li>
+                            <li><a href="shop.html?cat=home">لوازم خانه</a></li>
+                            <li><a href="shop.html?cat=beauty">زیبایی و سلامت</a></li>
+                            <li><a href="shop.html?cat=accessories">اکسسوری</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="shop.html">فروشگاه</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="shop.html?sort=discount">تخفیف‌ها 🔥</a>
+                    </li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="about.html">درباره ما</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="contact.html">تماس با ما</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu__head">
+            <span class="logo"><span class="logo__mark">L</span><span class="logo__text">لوکس<b>شاپ</b></span></span>
+            <button class="icon-btn" id="mobileMenuClose" aria-label="بستن منو">✕</button>
+        </div>
+        <ul class="mobile-menu__list">
+            <li><a href="index.html">خانه</a></li>
+            <li><a href="shop.html">فروشگاه</a></li>
+            <li><a href="shop.html?cat=digital">کالای دیجیتال</a></li>
+            <li><a href="shop.html?cat=clothing">پوشاک</a></li>
+            <li><a href="shop.html?cat=home">لوازم خانه</a></li>
+            <li><a href="shop.html?cat=beauty">زیبایی و سلامت</a></li>
+            <li><a href="shop.html?cat=accessories">اکسسوری</a></li>
+            <li><a href="about.html">درباره ما</a></li>
+            <li><a href="contact.html">تماس با ما</a></li>
+            <li><a href="dashboard.html">داشبورد</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="page-head page-head--sm">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="مسیر صفحه">
+                    <a href="index.html">خانه</a>
+                    <span>/</span>
+                    <span class="breadcrumb__current">سوالات متداول</span>
+                </nav>
+                <div class="page-head__row">
+                    <div>
+                        <h1 class="page-head__title">سوالات متداول</h1>
+                        <p class="page-head__desc">پاسخ سوالات پرتکرار شما درباره خرید، ارسال و پرداخت.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section content-page">
+            <div class="container content-page__container">
+
+                <!-- Search FAQ -->
+                <div class="faq-search">
+                    <div class="faq-search__input-wrap">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="search" id="faqSearch" placeholder="سوال خود را جست‌وجو کنید..." />
+                    </div>
+                </div>
+
+                <!-- FAQ Categories -->
+                <div class="faq-categories">
+                    <button class="chip is-active" data-cat="all">همه</button>
+                    <button class="chip" data-cat="orders">سفارش</button>
+                    <button class="chip" data-cat="payment">پرداخت</button>
+                    <button class="chip" data-cat="shipping">ارسال</button>
+                    <button class="chip" data-cat="returns">بازگشت</button>
+                    <button class="chip" data-cat="account">حساب کاربری</button>
+                </div>
+
+                <!-- FAQ List -->
+                <div class="faq-list" id="faqList">
+
+                    <div class="faq-group" data-cat="orders">
+                        <h2 class="content-subtitle">سفارش‌ها</h2>
+
+                        <details class="faq-item">
+                            <summary>چطور می‌توانم سفارشم را پیگیری کنم؟</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    بعد از ثبت سفارش، کد پیگیری از طریق پیامک برای شما ارسال می‌شود.
+                                    همچنین می‌توانید با مراجعه به صفحه «پیگیری سفارش» و وارد کردن کد سفارش، آخرین
+                                    وضعیت ارسال را ببینید.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>می‌توانم سفارشم را قبل از ارسال لغو کنم؟</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    بله، تا زمانی که سفارش شما به وضعیت «ارسال شده» نرسیده باشد،
+                                    می‌توانید از طریق پنل کاربری یا تماس با پشتیبانی، سفارش را لغو کنید.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>سفارشم رو اشتباه ثبت کردم، چیکار کنم؟</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    هرچه سریع‌تر با پشتیبانی تماس بگیرید. اگر سفارش هنوز ارسال نشده باشد،
+                                    می‌توانیم تغییرات لازم را اعمال کنیم.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-group" data-cat="payment">
+                        <h2 class="content-subtitle">پرداخت</h2>
+
+                        <details class="faq-item">
+                            <summary>چه روش‌های پرداختی پذیرفته می‌شود؟</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    ما پرداخت آنلاین از طریق درگاه بانکی امن، پرداخت با کیف پول سایت
+                                    و پرداخت در محل (فقط تهران) را پشتیبانی می‌کنیم.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>آیا پرداخت امن است؟</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    بله، تمام تراکنش‌ها روی درگاه بانکی معتبر و با پروتکل HTTPS رمزنگاری‌شده
+                                    انجام می‌شود. ما هیچ اطلاعات بانکی شما را ذخیره نمی‌کنیم.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>پرداخت ناموفق بود، پولم کم شده؟</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    در صورت ناموفق بودن پرداخت، مبلغ تا حداکثر ۷۲ ساعت کاری به حساب شما باز می‌گردد.
+                                    اگر بعد از این مدت مبلغ بازنگشت، با پشتیبانی تماس بگیرید.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-group" data-cat="shipping">
+                        <h2 class="content-subtitle">ارسال</h2>
+
+                        <details class="faq-item">
+                            <summary>هزینه ارسال چقدر است؟</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    هزینه ارسال بر اساس روش انتخابی و مقصد متفاوت است. خریدهای بالای ۵۰۰ هزار تومان
+                                    ارسال رایگان دارند.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>سفارشم چند روزه به دستم می‌رسد؟</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    ارسال عادی: ۳ تا ۵ روز کاری<br />
+                                    ارسال سریع: ۱ تا ۲ روز کاری<br />
+                                    ارسال فوری (پیک): فقط تهران، زیر ۳ ساعت
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>امکان ارسال به تمام شهرها وجود دارد؟</summary>
+                            <div class="faq-answer">
+                                <p>بله، ارسال به تمام شهرهای ایران با پست و پیک امکان‌پذیر است.</p>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-group" data-cat="returns">
+                        <h2 class="content-subtitle">مرجوعی و بازگشت</h2>
+
+                        <details class="faq-item">
+                            <summary>شرایط بازگشت کالا چیه؟</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    تا ۷ روز پس از دریافت، در صورتی که کالا استفاده نشده و بسته‌بندی سالم باشد،
+                                    می‌توانید کالا را مرجوع کنید. جزئیات در صفحه «رویه بازگشت کالا» آمده است.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>هزینه ارسال مرجوعی با کیه؟</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    اگر کالا معیوب باشد یا اشتباه ارسال شده باشد، هزینه با ماست.
+                                    در صورت انصراف از خرید، هزینه مرجوعی با شماست.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>پول من کی به حسابم برمی‌گرده؟</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    پس از تأیید مرجوعی توسط کارشناسان ما، مبلغ تا ۷۲ ساعت کاری
+                                    به حساب بانکی شما باز می‌گردد.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-group" data-cat="account">
+                        <h2 class="content-subtitle">حساب کاربری</h2>
+
+                        <details class="faq-item">
+                            <summary>چطور ثبت‌نام کنم؟</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    روی دکمه «ورود / ثبت‌نام» در بالای سایت کلیک کنید و با وارد کردن
+                                    ایمیل یا شماره موبایل، حساب کاربری بسازید.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>رمز عبورم رو فراموش کردم، چیکار کنم؟</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    از صفحه ورود، روی «فراموشی رمز عبور؟» کلیک کنید و مراحل بازیابی را
+                                    طی کنید. کد تأیید به ایمیل یا موبایل شما ارسال می‌شود.
+                                </p>
+                            </div>
+                        </details>
+
+                        <details class="faq-item">
+                            <summary>چطور سفارشاتم رو ببینم؟</summary>
+                            <div class="faq-answer">
+                                <p>
+                                    بعد از ورود به سایت، وارد «داشبورد» شوید و از منوی سمت راست
+                                    گزینه «سفارش‌های من» را انتخاب کنید.
+                                </p>
+                            </div>
+                        </details>
+                    </div>
+
+                </div>
+
+                <!-- Empty search result -->
+                <div class="content-empty" id="faqEmpty" hidden>
+                    <div class="content-empty__icon">🔍</div>
+                    <h3>سوالی با این کلمه پیدا نشد</h3>
+                    <p>می‌توانید با پشتیبانی تماس بگیرید تا کمکتون کنیم.</p>
+                    <a href="contact.html" class="btn btn--primary">تماس با پشتیبانی</a>
+                </div>
+
+                <!-- CTA -->
+                <div class="content-cta">
+                    <h3>سوالتون رو اینجا پیدا نکردید؟</h3>
+                    <p>تیم پشتیبانی ما همیشه آماده کمکه.</p>
+                    <a href="contact.html" class="btn btn--primary">تماس با ما</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <a href="index.html" class="logo logo--footer">
+                    <span class="logo__mark">L</span>
+                    <span class="logo__text">لوکس<b>شاپ</b></span>
+                </a>
+                <p class="footer__about">
+                    لوکس‌شاپ یک فروشگاه اینترنتی مدرن با تمرکز بر کیفیت، اصالت کالا
+                    و تجربه خرید لذت‌بخش برای شماست.
+                </p>
+                <div class="footer__social">
+                    <a href="#" aria-label="اینستاگرام">IG</a>
+                    <a href="#" aria-label="تلگرام">TG</a>
+                    <a href="#" aria-label="واتساپ">WA</a>
+                    <a href="#" aria-label="لینکدین">IN</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h3>دسترسی سریع</h3>
+                <ul>
+                    <li><a href="shop.html">فروشگاه</a></li>
+                    <li><a href="about.html">درباره ما</a></li>
+                    <li><a href="contact.html">تماس با ما</a></li>
+                    <li><a href="faq.html">سوالات متداول</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3>خدمات مشتریان</h3>
+                <ul>
+                    <li><a href="order-tracking.html">پیگیری سفارش</a></li>
+                    <li><a href="rules.html">قوانین و مقررات</a></li>
+                    <li><a href="privacy.html">حریم خصوصی</a></li>
+                    <li><a href="returns.html">رویه بازگشت کالا</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3>تماس با ما</h3>
+                <ul class="footer__contact">
+                    <li>📍 تهران، خیابان ولیعصر، پلاک ۱۲۳</li>
+                    <li>📞 ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                    <li>✉️ info@looxshop.ir</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <p>© ۱۴۰۴ لوکس‌شاپ — تمامی حقوق محفوظ است.</p>
+                <div class="footer__badges">
+                    <span>🔒 پرداخت امن</span>
+                    <span>✅ ضمانت اصالت</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="سبد خرید">
+        <div class="cart-drawer__head">
+            <h3>سبد خرید</h3>
+            <button class="icon-btn" id="cartClose" aria-label="بستن سبد خرید">✕</button>
+        </div>
+        <div class="cart-drawer__body" id="cartItems"></div>
+        <div class="cart-drawer__foot">
+            <div class="cart-drawer__total">
+                <span>جمع کل</span>
+                <strong id="cartTotal">۰ تومان</strong>
+            </div>
+            <a href="checkout.html" class="btn btn--primary btn--block">ادامه فرآیند خرید</a>
+        </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">↑</button>
+
+    <script src="assets/js/sync.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/faq.js"></script>
+    <script src="assets/js/notifications.js"></script>
+</body>
+
+</html>

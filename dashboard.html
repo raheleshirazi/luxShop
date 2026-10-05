@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#800020" />
+
+    <title>داشبورد کاربری | لوکس‌شاپ</title>
+    <meta name="description" content="داشبورد کاربری لوکس‌شاپ — مدیریت سفارش‌ها، آدرس‌ها، علاقه‌مندی‌ها و کیف پول." />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <header class="site-header" id="siteHeader">
+        <div class="topbar">
+            <div class="container topbar__inner">
+                <p class="topbar__text">🚚 ارسال رایگان برای خریدهای بالای ۵۰۰ هزار تومان</p>
+                <ul class="topbar__links">
+                    <li><a href="order-tracking.html">پیگیری سفارش</a></li>
+                    <li><a href="faq.html">سوالات متداول</a></li>
+                    <li><a href="contact.html">تماس با ما</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="container header-main__inner">
+                <button class="icon-btn menu-toggle" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+
+                <a href="index.html" class="logo" aria-label="لوکس‌شاپ">
+                    <span class="logo__mark">L</span>
+                    <span class="logo__text">لوکس<b>شاپ</b></span>
+                </a>
+
+                <form class="search" id="searchForm" role="search" autocomplete="off">
+                    <input type="search" id="searchInput" class="search__input"
+                        placeholder="جست‌وجوی محصول، برند یا دسته‌بندی..." aria-label="جست‌وجوی محصول" />
+                    <button type="submit" class="search__btn" aria-label="جست‌وجو">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="header-actions">
+                    <a href="login.html" class="icon-btn account-btn">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <circle cx="12" cy="8" r="4"></circle>
+                            <path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"></path>
+                        </svg>
+                        <span class="account-btn__text">ورود / ثبت‌نام</span>
+                    </a>
+                    <button class="icon-btn cart-btn" id="cartBtn" aria-label="سبد خرید">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="20" r="1.5"></circle>
+                            <circle cx="18" cy="20" r="1.5"></circle>
+                            <path d="M2 3h3l2.4 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 7H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">۰</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav" id="mainNav" aria-label="منوی اصلی">
+            <div class="container">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a class="main-nav__link" href="index.html">خانه</a></li>
+                    <li class="main-nav__item has-dropdown">
+                        <a class="main-nav__link" href="shop.html">
+                            دسته‌بندی‌ها
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="shop.html?cat=digital">کالای دیجیتال</a></li>
+                            <li><a href="shop.html?cat=clothing">پوشاک</a></li>
+                            <li><a href="shop.html?cat=home">لوازم خانه</a></li>
+                            <li><a href="shop.html?cat=beauty">زیبایی و سلامت</a></li>
+                            <li><a href="shop.html?cat=accessories">اکسسوری</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="shop.html">فروشگاه</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="shop.html?sort=discount">تخفیف‌ها 🔥</a>
+                    </li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="about.html">درباره ما</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="contact.html">تماس با ما</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu__head">
+            <span class="logo"><span class="logo__mark">L</span><span class="logo__text">لوکس<b>شاپ</b></span></span>
+            <button class="icon-btn" id="mobileMenuClose" aria-label="بستن منو">✕</button>
+        </div>
+        <ul class="mobile-menu__list">
+            <li><a href="index.html">خانه</a></li>
+            <li><a href="shop.html">فروشگاه</a></li>
+            <li><a href="shop.html?cat=digital">کالای دیجیتال</a></li>
+            <li><a href="shop.html?cat=clothing">پوشاک</a></li>
+            <li><a href="shop.html?cat=home">لوازم خانه</a></li>
+            <li><a href="shop.html?cat=beauty">زیبایی و سلامت</a></li>
+            <li><a href="shop.html?cat=accessories">اکسسوری</a></li>
+            <li><a href="about.html">درباره ما</a></li>
+            <li><a href="contact.html">تماس با ما</a></li>
+            <li><a href="dashboard.html">داشبورد</a></li>
+        </ul>
+    </div>
+
+    <main>
+
+        <section class="page-head page-head--sm">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="مسیر صفحه">
+                    <a href="index.html">خانه</a>
+                    <span>/</span>
+                    <span class="breadcrumb__current">داشبورد</span>
+                </nav>
+                <div class="page-head__row">
+                    <div>
+                        <h1 class="page-head__title">داشبورد کاربری</h1>
+                        <p class="page-head__desc">خوش آمدید! مدیریت حساب کاربری شما اینجاست.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section dashboard">
+            <div class="container">
+                <div class="dashboard-layout">
+
+                    <aside class="db-sidebar" id="dbSidebar">
+
+                        <div class="db-user">
+                            <div class="db-user__avatar" id="dbUserAvatar">U</div>
+                            <div class="db-user__info">
+                                <strong id="dbUserName">کاربر</strong>
+                                <small id="dbUserEmail">example@mail.com</small>
+                            </div>
+                        </div>
+
+                        <nav class="db-menu" aria-label="منوی داشبورد">
+                            <button class="db-menu__item is-active" data-section="profile">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round">
+                                    <circle cx="12" cy="8" r="4"></circle>
+                                    <path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"></path>
+                                </svg>
+                                <span>پروفایل من</span>
+                            </button>
+
+                            <button class="db-menu__item" data-section="orders">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                </svg>
+                                <span>سفارش‌های من</span>
+                                <span class="db-menu__badge" id="ordersBadge">۰</span>
+                            </button>
+
+                            <button class="db-menu__item" data-section="cart">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="9" cy="20" r="1.5"></circle>
+                                    <circle cx="18" cy="20" r="1.5"></circle>
+                                    <path d="M2 3h3l2.4 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 7H6"></path>
+                                </svg>
+                                <span>سبد خرید</span>
+                                <span class="db-menu__badge" id="cartBadge">۰</span>
+                            </button>
+
+                            <button class="db-menu__item" data-section="addresses">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>آدرس‌های من</span>
+                            </button>
+
+                            <button class="db-menu__item" data-section="wishlist">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21.2l7.7-7.8 1.1-1a5.5 5.5 0 0 0 0-7.8z">
+                                    </path>
+                                </svg>
+                                <span>علاقه‌مندی‌ها</span>
+                            </button>
+
+                            <button class="db-menu__item" data-section="wallet">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"></path>
+                                    <path d="M3 5v14a2 2 0 0 0 2 2h16v-5"></path>
+                                    <path d="M18 12a2 2 0 0 0 0 4h4v-4z"></path>
+                                </svg>
+                                <span>کیف پول</span>
+                            </button>
+
+                            <button class="db-menu__item" data-section="tickets">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                </svg>
+                                <span>تیکت‌های من</span>
+                                <span class="db-menu__badge" id="ticketsBadge">۰</span>
+                            </button>
+
+                            <button class="db-menu__item" data-section="reviews">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon
+                                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                    </polygon>
+                                </svg>
+                                <span>نظرات من</span>
+                            </button>
+
+                            <button class="db-menu__item" data-section="settings">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path
+                                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z">
+                                    </path>
+                                </svg>
+                                <span>تنظیمات</span>
+                            </button>
+                        </nav>
+
+                        <button class="db-logout" id="dbLogoutBtn">
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                <polyline points="16 17 21 12 16 7"></polyline>
+                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                            </svg>
+                            خروج از حساب
+                        </button>
+                    </aside>
+
+                    <div class="db-content" id="dbContent">
+
+                        <!-- ====== Profile ====== -->
+                        <section class="db-section is-active" data-section="profile">
+                            <div class="db-section__head">
+                                <h2>پروفایل من</h2>
+                                <p>اطلاعات حساب کاربری و عکس پروفایل خود را مدیریت کنید.</p>
+                            </div>
+
+                            <div class="db-avatar-section">
+                                <div class="db-avatar-wrap">
+                                    <div class="db-avatar" id="avatarPreview">U</div>
+                                    <button type="button" class="db-avatar__edit" id="avatarEditBtn"
+                                        aria-label="تغییر عکس">
+                                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path
+                                                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z">
+                                            </path>
+                                            <circle cx="12" cy="13" r="4"></circle>
+                                        </svg>
+                                    </button>
+                                    <input type="file" id="avatarInput" accept="image/*" hidden />
+                                </div>
+                                <div class="db-avatar-info">
+                                    <strong>عکس پروفایل</strong>
+                                    <small>فرمت JPG یا PNG — حداکثر ۲ مگابایت</small>
+                                    <div class="db-avatar-actions">
+                                        <button type="button" class="db-avatar-btn db-avatar-btn--primary"
+                                            id="avatarUploadBtn">انتخاب عکس</button>
+                                        <button type="button" class="db-avatar-btn" id="avatarRemoveBtn">حذف
+                                            عکس</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="db-subtitle">اطلاعات شخصی</h3>
+                            <form class="db-form" id="profileForm">
+                                <div class="form-grid">
+                                    <div class="form-field">
+                                        <label for="pfName">نام و نام خانوادگی</label>
+                                        <input type="text" id="pfName" placeholder="نام کامل" />
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="pfEmail">ایمیل</label>
+                                        <input type="email" id="pfEmail" placeholder="example@mail.com" />
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="pfPhone">شماره موبایل</label>
+                                        <input type="tel" id="pfPhone" placeholder="۰۹۱۲..." />
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="pfBirth">تاریخ تولد</label>
+                                        <input type="text" id="pfBirth" placeholder="۱۳۷۰/۰۱/۰۱" />
+                                    </div>
+                                    <div class="form-field form-field--full">
+                                        <label for="pfGender">جنسیت</label>
+                                        <select id="pfGender">
+                                            <option value="">انتخاب کنید</option>
+                                            <option value="male">آقا</option>
+                                            <option value="female">خانم</option>
+                                            <option value="other">ترجیح می‌دهم نگویم</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-field form-field--full">
+                                        <label for="pfBio">بیوگرافی (اختیاری)</label>
+                                        <textarea id="pfBio" rows="3" placeholder="چند خط درباره خودتان..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="db-form__actions">
+                                    <button type="submit" class="btn btn--primary">ذخیره تغییرات</button>
+                                </div>
+                            </form>
+
+                            <h3 class="db-subtitle">تغییر رمز عبور</h3>
+                            <form class="db-form" id="passwordForm">
+                                <div class="form-grid">
+                                    <div class="form-field form-field--full">
+                                        <label for="stCurrentPass">رمز عبور فعلی</label>
+                                        <input type="password" id="stCurrentPass" />
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="stNewPass">رمز عبور جدید</label>
+                                        <input type="password" id="stNewPass" minlength="6"
+                                            placeholder="حداقل ۶ کاراکتر" />
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="stConfirmPass">تکرار رمز جدید</label>
+                                        <input type="password" id="stConfirmPass" />
+                                    </div>
+                                </div>
+                                <div class="db-form__actions">
+                                    <button type="submit" class="btn btn--primary">تغییر رمز عبور</button>
+                                </div>
+                            </form>
+                        </section>
+
+                        <!-- ====== Orders ====== -->
+                        <section class="db-section" data-section="orders">
+                            <div class="db-section__head">
+                                <h2>سفارش‌های من</h2>
+                                <p>تاریخچه سفارش‌های شما و وضعیت آن‌ها.</p>
+                            </div>
+
+                            <div class="db-orders" id="dbOrdersList"></div>
+                        </section>
+
+                        <!-- ====== Cart ====== -->
+                        <section class="db-section" data-section="cart">
+                            <div class="db-section__head">
+                                <h2>سبد خرید</h2>
+                                <p>محصولاتی که هنوز به مرحله پرداخت نرفته‌اند.</p>
+                            </div>
+
+                            <div class="db-cart" id="dbCartList"></div>
+
+                            <div class="db-cart-summary" id="dbCartSummary" hidden>
+                                <div class="db-cart-summary__row">
+                                    <span>جمع کل کالاها:</span>
+                                    <strong id="dbCartTotal">۰ تومان</strong>
+                                </div>
+                                <a href="checkout.html" class="btn btn--primary">ادامه فرآیند خرید</a>
+                            </div>
+                        </section>
+
+                        <!-- ====== Addresses ====== -->
+                        <section class="db-section" data-section="addresses">
+                            <div class="db-section__head">
+                                <h2>آدرس‌های من</h2>
+                                <p>آدرس‌های ارسال خود را مدیریت کنید.</p>
+                            </div>
+
+                            <div class="db-addresses" id="dbAddressesList"></div>
+
+                            <button class="btn btn--outline" id="addAddressBtn">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                                افزودن آدرس جدید
+                            </button>
+                        </section>
+
+                        <!-- ====== Wishlist ====== -->
+                        <section class="db-section" data-section="wishlist">
+                            <div class="db-section__head">
+                                <h2>علاقه‌مندی‌ها</h2>
+                                <p>محصولاتی که برای بعد ذخیره کرده‌اید.</p>
+                            </div>
+
+                            <div class="db-wishlist" id="dbWishlistGrid"></div>
+                        </section>
+
+                        <!-- ====== Wallet ====== -->
+                        <section class="db-section" data-section="wallet">
+                            <div class="db-section__head">
+                                <h2>کیف پول</h2>
+                                <p>موجودی و تراکنش‌های کیف پول شما.</p>
+                            </div>
+
+                            <div class="db-wallet">
+                                <div class="db-wallet__balance">
+                                    <span>موجودی فعلی</span>
+                                    <strong id="dbWalletBalance">۰ تومان</strong>
+                                </div>
+                                <button class="btn btn--primary" id="chargeWalletBtn">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                        stroke-width="2.5" stroke-linecap="round">
+                                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    </svg>
+                                    شارژ کیف پول
+                                </button>
+                            </div>
+
+                            <h3 class="db-subtitle">تاریخچه تراکنش‌ها</h3>
+                            <div class="db-wallet__transactions" id="dbWalletTransactions"></div>
+                        </section>
+
+                        <!-- ====== Tickets ====== -->
+                        <section class="db-section" data-section="tickets">
+                            <div class="db-section__head">
+                                <h2>تیکت‌های من</h2>
+                                <p>سوالات و درخواست‌های پشتیبانی خود را ثبت و پیگیری کنید.</p>
+                            </div>
+
+                            <div class="db-ticket-form-wrap" id="ticketFormWrap" hidden>
+                                <form class="db-ticket-form" id="ticketForm">
+                                    <h3 class="db-subtitle">ثبت تیکت جدید</h3>
+                                    <div class="form-grid">
+                                        <div class="form-field form-field--full">
+                                            <label for="ticketSubject">موضوع تیکت</label>
+                                            <input type="text" id="ticketSubject" required
+                                                placeholder="موضوع تیکت را وارد کنید" />
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="ticketCategory">دسته‌بندی</label>
+                                            <select id="ticketCategory" required>
+                                                <option value="">انتخاب کنید</option>
+                                                <option>مشکل در خرید</option>
+                                                <option>پیگیری سفارش</option>
+                                                <option>مرجوعی و بازگشت کالا</option>
+                                                <option>مشکل پرداخت</option>
+                                                <option>پیشنهاد یا انتقاد</option>
+                                                <option>سایر</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-field">
+                                            <label for="ticketPriority">اولویت</label>
+                                            <select id="ticketPriority" required>
+                                                <option value="low">کم</option>
+                                                <option value="medium" selected>متوسط</option>
+                                                <option value="high">بالا</option>
+                                                <option value="urgent">فوری</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-field form-field--full">
+                                            <label for="ticketMessage">توضیحات</label>
+                                            <textarea id="ticketMessage" rows="5" required
+                                                placeholder="جزئیات کامل مشکل یا درخواست خود را بنویسید..."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="db-form__actions">
+                                        <button type="button" class="btn btn--ghost"
+                                            id="cancelTicketBtn">انصراف</button>
+                                        <button type="submit" class="btn btn--primary">ثبت تیکت</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="db-tickets" id="dbTicketsList"></div>
+
+                            <button class="btn btn--primary db-ticket-new-btn" id="newTicketBtn">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                    stroke-width="2.5" stroke-linecap="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                                ثبت تیکت جدید
+                            </button>
+                        </section>
+
+                        <!-- ====== Reviews ====== -->
+                        <section class="db-section" data-section="reviews">
+                            <div class="db-section__head">
+                                <h2>نظرات من</h2>
+                                <p>نظراتی که برای محصولات ثبت کرده‌اید.</p>
+                            </div>
+
+                            <div class="db-reviews" id="dbReviewsList"></div>
+                        </section>
+
+                        <!-- ====== Settings ====== -->
+                        <section class="db-section" data-section="settings">
+                            <div class="db-section__head">
+                                <h2>تنظیمات</h2>
+                                <p>تنظیمات امنیتی، اعلان‌ها و حریم خصوصی.</p>
+                            </div>
+
+                            <div class="db-setting-card">
+                                <div class="db-setting-card__head">
+                                    <h3>
+                                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        </svg>
+                                        امنیت حساب
+                                    </h3>
+                                </div>
+                                <div class="db-setting-card__body">
+                                    <label class="db-toggle">
+                                        <input type="checkbox" id="twoFactorToggle" />
+                                        <span class="db-toggle__slider"></span>
+                                        <div class="db-toggle__content">
+                                            <strong>ورود دو مرحله‌ای (2FA)</strong>
+                                            <small>با فعال‌سازی، هنگام ورود کد یکبارمصرف پیامک می‌شود.</small>
+                                        </div>
+                                    </label>
+
+                                    <label class="db-toggle">
+                                        <input type="checkbox" checked id="loginAlertToggle" />
+                                        <span class="db-toggle__slider"></span>
+                                        <div class="db-toggle__content">
+                                            <strong>هشدار ورود جدید</strong>
+                                            <small>اگر از دستگاه جدید وارد شوید، ایمیل هشدار دریافت می‌کنید.</small>
+                                        </div>
+                                    </label>
+
+                                    <div class="db-setting-row">
+                                        <div>
+                                            <strong>دستگاه‌های فعال</strong>
+                                            <small>دستگاه‌هایی که در آن‌ها وارد شده‌اید.</small>
+                                        </div>
+                                        <button type="button" class="db-setting-btn" id="devicesBtn">مشاهده</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="db-setting-card">
+                                <div class="db-setting-card__head">
+                                    <h3>
+                                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                        </svg>
+                                        اعلان‌ها
+                                    </h3>
+                                </div>
+                                <div class="db-setting-card__body">
+                                    <label class="db-toggle">
+                                        <input type="checkbox" checked data-setting="notif-email" />
+                                        <span class="db-toggle__slider"></span>
+                                        <div class="db-toggle__content">
+                                            <strong>اعلان‌های ایمیلی</strong>
+                                            <small>دریافت کد تخفیف و اخبار فروشگاه از طریق ایمیل.</small>
+                                        </div>
+                                    </label>
+
+                                    <label class="db-toggle">
+                                        <input type="checkbox" checked data-setting="notif-sms" />
+                                        <span class="db-toggle__slider"></span>
+                                        <div class="db-toggle__content">
+                                            <strong>اعلان‌های پیامکی</strong>
+                                            <small>اطلاع‌رسانی سفارش‌ها از طریق پیامک.</small>
+                                        </div>
+                                    </label>
+
+                                    <label class="db-toggle">
+                                        <input type="checkbox" data-setting="notif-newsletter" />
+                                        <span class="db-toggle__slider"></span>
+                                        <div class="db-toggle__content">
+                                            <strong>خبرنامه هفتگی</strong>
+                                            <small>جدیدترین تخفیف‌ها و پیشنهادها هر هفته.</small>
+                                        </div>
+                                    </label>
+
+                                    <label class="db-toggle">
+                                        <input type="checkbox" checked data-setting="notif-order" />
+                                        <span class="db-toggle__slider"></span>
+                                        <div class="db-toggle__content">
+                                            <strong>پیگیری سفارش</strong>
+                                            <small>اطلاع‌رسانی تغییر وضعیت سفارش‌ها.</small>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="db-setting-card">
+                                <div class="db-setting-card__head">
+                                    <h3>
+                                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                        </svg>
+                                        حریم خصوصی
+                                    </h3>
+                                </div>
+                                <div class="db-setting-card__body">
+                                    <label class="db-toggle">
+                                        <input type="checkbox" checked data-setting="privacy-profile" />
+                                        <span class="db-toggle__slider"></span>
+                                        <div class="db-toggle__content">
+                                            <strong>نمایش پروفایل عمومی</strong>
+                                            <small>سایر کاربران می‌توانند پروفایل شما را ببینند.</small>
+                                        </div>
+                                    </label>
+
+                                    <label class="db-toggle">
+                                        <input type="checkbox" data-setting="privacy-activity" />
+                                        <span class="db-toggle__slider"></span>
+                                        <div class="db-toggle__content">
+                                            <strong>نمایش فعالیت‌ها</strong>
+                                            <small>نظرات و امتیازهای شما برای دیگران نمایش داده شوند.</small>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="db-setting-card">
+                                <div class="db-setting-card__head">
+                                    <h3>
+                                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                                            <path
+                                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                            </path>
+                                        </svg>
+                                        زبان و منطقه
+                                    </h3>
+                                </div>
+                                <div class="db-setting-card__body">
+                                    <div class="db-setting-row">
+                                        <div>
+                                            <strong>زبان</strong>
+                                            <small>زبان پیش‌فرض سایت</small>
+                                        </div>
+                                        <select class="db-setting-select" id="languageSelect">
+                                            <option value="fa" selected>فارسی</option>
+                                            <option value="en">English</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="db-setting-row">
+                                        <div>
+                                            <strong>واحد پول</strong>
+                                            <small>واحد پول نمایش قیمت‌ها</small>
+                                        </div>
+                                        <select class="db-setting-select" id="currencySelect">
+                                            <option value="toman" selected>تومان</option>
+                                            <option value="rial">ریال</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="db-setting-card db-setting-card--danger">
+                                <div class="db-setting-card__head">
+                                    <h3>
+                                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <path
+                                                d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                                            </path>
+                                            <line x1="12" y1="9" x2="12" y2="13"></line>
+                                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                                        </svg>
+                                        منطقه خطر
+                                    </h3>
+                                </div>
+                                <div class="db-setting-card__body">
+                                    <div class="db-setting-row">
+                                        <div>
+                                            <strong>حذف حساب کاربری</strong>
+                                            <small>با حذف حساب، تمام اطلاعات شما پاک می‌شود.</small>
+                                        </div>
+                                        <button type="button" class="db-setting-btn db-setting-btn--danger"
+                                            id="deleteAccountBtn">حذف حساب</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <a href="index.html" class="logo logo--footer">
+                    <span class="logo__mark">L</span>
+                    <span class="logo__text">لوکس<b>شاپ</b></span>
+                </a>
+                <p class="footer__about">
+                    لوکس‌شاپ یک فروشگاه اینترنتی مدرن با تمرکز بر کیفیت، اصالت کالا
+                    و تجربه خرید لذت‌بخش برای شماست.
+                </p>
+                <div class="footer__social">
+                    <a href="#" aria-label="اینستاگرام">IG</a>
+                    <a href="#" aria-label="تلگرام">TG</a>
+                    <a href="#" aria-label="واتساپ">WA</a>
+                    <a href="#" aria-label="لینکدین">IN</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h3>دسترسی سریع</h3>
+                <ul>
+                    <li><a href="shop.html">فروشگاه</a></li>
+                    <li><a href="about.html">درباره ما</a></li>
+                    <li><a href="contact.html">تماس با ما</a></li>
+                    <li><a href="faq.html">سوالات متداول</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3>خدمات مشتریان</h3>
+                <ul>
+                    <li><a href="order-tracking.html">پیگیری سفارش</a></li>
+                    <li><a href="rules.html">قوانین و مقررات</a></li>
+                    <li><a href="privacy.html">حریم خصوصی</a></li>
+                    <li><a href="returns.html">رویه بازگشت کالا</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3>تماس با ما</h3>
+                <ul class="footer__contact">
+                    <li>📍 تهران، خیابان ولیعصر، پلاک ۱۲۳</li>
+                    <li>📞 ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                    <li>✉️ info@looxshop.ir</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <p>© ۱۴۰۴ لوکس‌شاپ — تمامی حقوق محفوظ است.</p>
+                <div class="footer__badges">
+                    <span>🔒 پرداخت امن</span>
+                    <span>✅ ضمانت اصالت</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="سبد خرید">
+        <div class="cart-drawer__head">
+            <h3>سبد خرید</h3>
+            <button class="icon-btn" id="cartClose" aria-label="بستن سبد خرید">✕</button>
+        </div>
+        <div class="cart-drawer__body" id="cartItems"></div>
+        <div class="cart-drawer__foot">
+            <div class="cart-drawer__total">
+                <span>جمع کل</span>
+                <strong id="cartTotal">۰ تومان</strong>
+            </div>
+            <a href="checkout.html" class="btn btn--primary btn--block">ادامه فرآیند خرید</a>
+        </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">↑</button>
+
+    <script src="assets/js/sync.js"></script>
+    <script src="assets/js/notifications.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

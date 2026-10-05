@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#800020" />
+
+    <title>سفارش شما ثبت شد | لوکس‌شاپ</title>
+    <meta name="description"
+        content="سفارش شما با موفقیت ثبت شد. اطلاعات پیگیری از طریق پیامک برای شما ارسال خواهد شد." />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://example.com/order-success.html" />
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER (simplified) -->
+    <header class="site-header" id="siteHeader">
+        <div class="header-main">
+            <div class="container header-main__inner">
+                <a href="index.html" class="logo" aria-label="لوکس‌شاپ">
+                    <span class="logo__mark">L</span>
+                    <span class="logo__text">لوکس<b>شاپ</b></span>
+                </a>
+
+                <a href="shop.html" class="btn btn--outline">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    ادامه خرید
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <section class="section order-success">
+            <div class="container">
+
+                <!-- Success animation + message -->
+                <div class="success-card">
+                    <div class="success-card__icon">
+                        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+
+                    <h1 class="success-card__title">سفارش شما با موفقیت ثبت شد!</h1>
+                    <p class="success-card__text">
+                        از خرید شما سپاسگزاریم. اطلاعات پیگیری سفارش از طریق پیامک برای شما ارسال خواهد شد.
+                    </p>
+
+                    <div class="success-card__meta">
+                        <div class="success-meta__item">
+                            <span>شماره سفارش</span>
+                            <strong id="orderNumber">—</strong>
+                        </div>
+                        <div class="success-meta__item">
+                            <span>تاریخ ثبت</span>
+                            <strong id="orderDate">—</strong>
+                        </div>
+                        <div class="success-meta__item">
+                            <span>مبلغ پرداخت‌شده</span>
+                            <strong id="orderTotal">—</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Details grid -->
+                <div class="success-details">
+
+                    <!-- Order summary box -->
+                    <div class="success-box">
+                        <h2 class="success-box__title">
+                            <span>📦</span>
+                            خلاصه سفارش
+                        </h2>
+
+                        <div class="success-summary">
+                            <div class="success-summary__row">
+                                <span>جمع کالاها</span>
+                                <strong id="sumSubtotal">—</strong>
+                            </div>
+                            <div class="success-summary__row">
+                                <span>هزینه ارسال</span>
+                                <strong id="sumShipping">—</strong>
+                            </div>
+                            <div class="success-summary__row success-summary__row--discount" id="sumDiscountRow" hidden>
+                                <span>تخفیف</span>
+                                <strong id="sumDiscount">—</strong>
+                            </div>
+                            <div class="success-summary__row success-summary__row--wallet" id="sumWalletRow" hidden>
+                                <span>پرداخت از کیف پول</span>
+                                <strong id="sumWallet">—</strong>
+                            </div>
+
+                            <div class="success-summary__divider"></div>
+
+                            <div class="success-summary__total">
+                                <span>مبلغ کل</span>
+                                <strong id="sumTotal">—</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Next steps box -->
+                    <div class="success-box">
+                        <h2 class="success-box__title">
+                            <span>🚀</span>
+                            مراحل بعدی
+                        </h2>
+
+                        <ul class="success-steps">
+                            <li>
+                                <span class="success-steps__num">۱</span>
+                                <div>
+                                    <strong>تایید سفارش</strong>
+                                    <small>سفارش شما در حال بررسی و تایید نهایی است.</small>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="success-steps__num">۲</span>
+                                <div>
+                                    <strong>آماده‌سازی و بسته‌بندی</strong>
+                                    <small>محصولات با دقت بسته‌بندی و آماده ارسال می‌شوند.</small>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="success-steps__num">۳</span>
+                                <div>
+                                    <strong>ارسال و تحویل</strong>
+                                    <small>کد رهگیری از طریق پیامک برای شما ارسال خواهد شد.</small>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Action buttons -->
+                <div class="success-actions">
+                    <a href="order-tracking.html" class="btn btn--primary">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        پیگیری سفارش
+                    </a>
+
+                    <a href="shop.html" class="btn btn--outline">ادامه خرید</a>
+
+                    <a href="index.html" class="btn btn--ghost">بازگشت به خانه</a>
+                </div>
+
+                <!-- Newsletter prompt -->
+                <div class="success-newsletter">
+                    <p>💡 با عضویت در خبرنامه، تخفیف‌های ویژه را از دست ندهید!</p>
+                    <a href="index.html#newsletter" class="link-more">عضویت در خبرنامه ←</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER mini -->
+    <footer class="site-footer">
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <p>© ۱۴۰۴ لوکس‌شاپ — تمامی حقوق محفوظ است.</p>
+                <div class="footer__badges">
+                    <span>🔒 پرداخت امن</span>
+                    <span>✅ ضمانت اصالت</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/order-success.js"></script>
+    <script src="assets/js/notifications.js"></script>
+</body>
+
+</html>

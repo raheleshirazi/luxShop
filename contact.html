@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#800020" />
+    <title>تماس با ما | لوکس‌شاپ</title>
+    <meta name="description" content="راه‌های ارتباطی و فرم تماس با فروشگاه لوکس‌شاپ." />
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+        <div class="topbar">
+            <div class="container topbar__inner">
+                <p class="topbar__text">🚚 ارسال رایگان برای خریدهای بالای ۵۰۰ هزار تومان</p>
+                <ul class="topbar__links">
+                    <li><a href="order-tracking.html">پیگیری سفارش</a></li>
+                    <li><a href="faq.html">سوالات متداول</a></li>
+                    <li><a href="contact.html">تماس با ما</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="header-main">
+            <div class="container header-main__inner">
+                <button class="icon-btn menu-toggle" id="menuToggle" aria-label="باز کردن منو" aria-expanded="false">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+
+                <a href="index.html" class="logo" aria-label="لوکس‌شاپ">
+                    <span class="logo__mark">L</span>
+                    <span class="logo__text">لوکس<b>شاپ</b></span>
+                </a>
+
+                <form class="search" id="searchForm" role="search" autocomplete="off">
+                    <input type="search" id="searchInput" class="search__input"
+                        placeholder="جست‌وجوی محصول، برند یا دسته‌بندی..." aria-label="جست‌وجوی محصول" />
+                    <button type="submit" class="search__btn" aria-label="جست‌وجو">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="header-actions">
+                    <a href="login.html" class="icon-btn account-btn">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <circle cx="12" cy="8" r="4"></circle>
+                            <path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"></path>
+                        </svg>
+                        <span class="account-btn__text">ورود / ثبت‌نام</span>
+                    </a>
+                    <button class="icon-btn cart-btn" id="cartBtn" aria-label="سبد خرید">
+                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="20" r="1.5"></circle>
+                            <circle cx="18" cy="20" r="1.5"></circle>
+                            <path d="M2 3h3l2.4 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 7H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">۰</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav" id="mainNav" aria-label="منوی اصلی">
+            <div class="container">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a class="main-nav__link" href="index.html">خانه</a></li>
+                    <li class="main-nav__item has-dropdown">
+                        <a class="main-nav__link" href="shop.html">
+                            دسته‌بندی‌ها
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <ul class="dropdown">
+                            <li><a href="shop.html?cat=digital">کالای دیجیتال</a></li>
+                            <li><a href="shop.html?cat=clothing">پوشاک</a></li>
+                            <li><a href="shop.html?cat=home">لوازم خانه</a></li>
+                            <li><a href="shop.html?cat=beauty">زیبایی و سلامت</a></li>
+                            <li><a href="shop.html?cat=accessories">اکسسوری</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="shop.html">فروشگاه</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="shop.html?sort=discount">تخفیف‌ها 🔥</a>
+                    </li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="about.html">درباره ما</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link is-active" href="contact.html">تماس با ما</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu__head">
+            <span class="logo"><span class="logo__mark">L</span><span class="logo__text">لوکس<b>شاپ</b></span></span>
+            <button class="icon-btn" id="mobileMenuClose" aria-label="بستن منو">✕</button>
+        </div>
+        <ul class="mobile-menu__list">
+            <li><a href="index.html">خانه</a></li>
+            <li><a href="shop.html">فروشگاه</a></li>
+            <li><a href="about.html">درباره ما</a></li>
+            <li><a href="contact.html">تماس با ما</a></li>
+            <li><a href="login.html">ورود / ثبت‌نام</a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- Breadcrumb -->
+        <section class="page-head page-head--sm">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="مسیر صفحه">
+                    <a href="index.html">خانه</a>
+                    <span>/</span>
+                    <span class="breadcrumb__current">تماس با ما</span>
+                </nav>
+                <div class="page-head__row">
+                    <div>
+                        <h1 class="page-head__title">با ما در تماس باشید</h1>
+                        <p class="page-head__desc">هر سوال، پیشنهاد یا انتقادی دارید، خوشحال می‌شویم بشنویم.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Info Cards -->
+        <section class="section">
+            <div class="container">
+                <div class="contact-info__grid">
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-card__icon">
+                            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3>تماس تلفنی</h3>
+                        <a href="tel:02112345678" class="contact-info-card__value">۰۲۱-۱۲۳۴۵۶۷۸</a>
+                        <p>شنبه تا پنجشنبه، ۹ صبح تا ۶ عصر</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-card__icon">
+                            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h3>ایمیل</h3>
+                        <a href="mailto:info@looxshop.ir" class="contact-info-card__value">info@looxshop.ir</a>
+                        <p>پاسخ‌دهی حداکثر تا ۲۴ ساعت</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-card__icon">
+                            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3>آدرس فروشگاه</h3>
+                        <span class="contact-info-card__value">تهران، خیابان ولیعصر، پلاک ۱۲۳</span>
+                        <p>مراجعه حضوری با هماهنگی قبلی</p>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-card__icon">
+                            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3>ساعات کاری</h3>
+                        <span class="contact-info-card__value">۹:۰۰ - ۱۸:۰۰</span>
+                        <p>جمعه‌ها تعطیل</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Form + Sidebar -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="contact-main__grid">
+
+                    <!-- Form -->
+                    <div class="contact-form-box">
+                        <div class="contact-form-box__head">
+                            <h2>فرم تماس</h2>
+                            <p>پیام خود را ارسال کنید، در اسرع وقت پاسخ می‌دهیم.</p>
+                        </div>
+
+                        <div class="auth-alert" id="contactAlert" hidden></div>
+
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-grid">
+                                <div class="form-field">
+                                    <label for="contactName">نام و نام خانوادگی *</label>
+                                    <input type="text" id="contactName" required placeholder="مثلاً علی رضایی" />
+                                </div>
+
+                                <div class="form-field">
+                                    <label for="contactPhone">شماره تماس *</label>
+                                    <input type="tel" id="contactPhone" required placeholder="۰۹۱۲۳۴۵۶۷۸۹" dir="ltr" />
+                                </div>
+
+                                <div class="form-field form-field--full">
+                                    <label for="contactEmail">ایمیل (اختیاری)</label>
+                                    <input type="email" id="contactEmail" placeholder="example@email.com" dir="ltr" />
+                                </div>
+
+                                <div class="form-field form-field--full">
+                                    <label for="contactSubject">موضوع *</label>
+                                    <input type="text" id="contactSubject" required placeholder="موضوع پیام" />
+                                </div>
+
+                                <div class="form-field form-field--full">
+                                    <label for="contactMessage">متن پیام *</label>
+                                    <textarea id="contactMessage" rows="6" required
+                                        placeholder="پیام خود را با جزئیات بنویسید..."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="contact-form__actions">
+                                <button type="submit" class="btn btn--primary">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                    </svg>
+                                    ارسال پیام
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="contact-side">
+
+                        <div class="contact-side__card">
+                            <h3>سوالات متداول</h3>
+                            <p class="contact-side__text">
+                                شاید پاسخ سوال شما در بخش سوالات متداول باشد.
+                            </p>
+                            <a href="faq.html" class="btn btn--outline" style="width: 100%;">
+                                مشاهده سوالات متداول
+                            </a>
+                        </div>
+
+                        <div class="contact-side__card">
+                            <h3>شبکه‌های اجتماعی</h3>
+                            <p class="contact-side__text">
+                                ما را در شبکه‌های اجتماعی دنبال کنید تا از تخفیف‌های ویژه باخبر شوید.
+                            </p>
+                            <div class="contact-social">
+                                <a href="#" aria-label="اینستاگرام">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg>
+                                </a>
+                                <a href="#" aria-label="تلگرام">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21.5 2 2 12l6 2 2 7 5-5 6 5 0-19z"></path>
+                                    </svg>
+                                </a>
+                                <a href="#" aria-label="واتساپ">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-side__card contact-side__card--accent">
+                            <h3>پشتیبانی ۲۴/۷</h3>
+                            <p class="contact-side__text">
+                                تیم پشتیبانی ما در تمام ساعات شبانه‌روز آماده کمک به شماست.
+                            </p>
+                            <a href="dashboard.html#tickets" class="btn btn--primary">
+                                ثبت تیکت پشتیبانی
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer__grid">
+            <div class="footer__col">
+                <a href="index.html" class="logo logo--footer">
+                    <span class="logo__mark">L</span>
+                    <span class="logo__text">لوکس<b>شاپ</b></span>
+                </a>
+                <p class="footer__about">
+                    لوکس‌شاپ یک فروشگاه اینترنتی مدرن با تمرکز بر کیفیت، اصالت کالا
+                    و تجربه خرید لذت‌بخش برای شماست.
+                </p>
+                <div class="footer__social">
+                    <a href="#" aria-label="اینستاگرام">IG</a>
+                    <a href="#" aria-label="تلگرام">TG</a>
+                    <a href="#" aria-label="واتساپ">WA</a>
+                    <a href="#" aria-label="لینکدین">IN</a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <h3>دسترسی سریع</h3>
+                <ul>
+                    <li><a href="shop.html">فروشگاه</a></li>
+                    <li><a href="about.html">درباره ما</a></li>
+                    <li><a href="contact.html">تماس با ما</a></li>
+                    <li><a href="faq.html">سوالات متداول</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3>خدمات مشتریان</h3>
+                <ul>
+                    <li><a href="order-tracking.html">پیگیری سفارش</a></li>
+                    <li><a href="rules.html">قوانین و مقررات</a></li>
+                    <li><a href="privacy.html">حریم خصوصی</a></li>
+                    <li><a href="returns.html">رویه بازگشت کالا</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <h3>تماس با ما</h3>
+                <ul class="footer__contact">
+                    <li>📍 تهران، خیابان ولیعصر، پلاک ۱۲۳</li>
+                    <li>📞 ۰۲۱-۱۲۳۴۵۶۷۸</li>
+                    <li>✉️ info@looxshop.ir</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <p>© ۱۴۰۴ لوکس‌شاپ — تمامی حقوق محفوظ است.</p>
+                <div class="footer__badges">
+                    <span>🔒 پرداخت امن</span>
+                    <span>✅ ضمانت اصالت</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CART DRAWER -->
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="سبد خرید">
+        <div class="cart-drawer__head">
+            <h3>سبد خرید</h3>
+            <button class="icon-btn" id="cartClose" aria-label="بستن سبد خرید">✕</button>
+        </div>
+        <div class="cart-drawer__body" id="cartItems"></div>
+        <div class="cart-drawer__foot">
+            <div class="cart-drawer__total">
+                <span>جمع کل</span>
+                <strong id="cartTotal">۰ تومان</strong>
+            </div>
+            <a href="checkout.html" class="btn btn--primary btn--block">ادامه فرآیند خرید</a>
+        </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">↑</button>
+
+    <script src="assets/js/sync.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/notifications.js"></script>
+</body>
+
+</html>
