@@ -1,43 +1,74 @@
-# 🛍️ LooxShop — Modern E-Commerce Store
+# 🛍️ لوکس‌شاپ (LuxShop) — فروشگاه اینترنتی مدرن
 
-A complete, fully-functional e-commerce storefront built with **Vanilla JavaScript** and **localStorage** — no backend required. It simulates a real online shop with user accounts, shopping cart, checkout, order tracking, admin panel, and real-time notifications.
+یک فروشگاه اینترنتی کامل و واکنش‌گرا با **HTML، CSS و JavaScript خالص** (بدون هیچ فریم‌ورکی). این پروژه شامل پنل کاربری، سبد خرید، پیگیری سفارش و پنل ادمین است.
 
----
-
-## 📌 What is LooxShop?
-
-LooxShop is a **front-end e-commerce demo** that mimics a real online store. It includes:
-
-- 🛒 **Storefront** — Browse products, filter by category, search, add to cart
-- 👤 **User accounts** — Sign up, login, dashboard, profile, wallet, addresses
-- 💳 **Checkout flow** — Cart, coupon codes, shipping options, wallet payment
-- 📦 **Order tracking** — Real-time status timeline (processing → shipped → delivered)
-- 🎫 **Support tickets** — Two-way conversation between customer & admin
-- ⭐ **Product reviews** — Star ratings with admin replies
-- 🛠️ **Admin panel** — Full control over products, orders, users, tickets, and reviews
-- 🔔 **Real-time sync** — Instant updates between user dashboard and admin panel without page refresh
+🔗 **دموی آنلاین:** [https://raheleshirazi.github.io/luxShop](https://raheleshirazi.github.io/luxShop)
 
 ---
 
-## 👥 Who is it for?
+## 📸 پیش‌نمایش پروژه
 
-- **Shoppers** — Browse, buy, track orders, and manage their account
-- **Admins** — Manage the entire store from a dedicated dashboard
-- **Developers** — Perfect for learning modern JS patterns (event delegation, localStorage-based state, real-time sync with BroadcastChannel)
+### 🏠 صفحه اصلی
 
----
-
-## 🧰 Tech Stack
-
-| Layer | Technology |
+| نمای اول | امکانات |
 |---|---|
-| **Frontend** | HTML5, CSS3, Vanilla JavaScript (ES6+) |
-| **Storage** | Browser `localStorage` (no backend needed) |
-| **Fonts** | Vazirmatn (Persian) |
-| **Icons** | Inline SVG |
-| **Real-time** | `BroadcastChannel` + `storage` events + polling |
-| **Language** | Persian (RTL) |
+| ![home1](assets/screenshots/01-home.png) | ![home2](assets/screenshots/02-home-features.png) |
+
+| دسته‌بندی‌ها | محصولات پرطرفدار |
+|---|---|
+| ![home3](assets/screenshots/03-home-products.png) | ![home4](assets/screenshots/04-home-categories.png) |
+
+![home5](assets/screenshots/05-home-footer.png)
 
 ---
 
-## 📁 Project Structure
+### 🔐 ورود و ثبت‌نام
+![login](assets/screenshots/06-login.png)
+
+---
+
+### 📦 صفحه محصول
+| محصول ۱ | محصول ۲ |
+|---|---|
+| ![product1](assets/screenshots/10-product.png) | ![product2](assets/screenshots/11-product2.png) |
+
+![products3](assets/screenshots/12-products.png)
+
+---
+
+### 📋 پیگیری سفارش
+![order-tracking](assets/screenshots/07-order-tracking.png)
+
+---
+
+### ❓ سوالات متداول
+| بخش اول | بخش دوم |
+|---|---|
+| ![faq](assets/screenshots/08-faq.png) | ![faq2](assets/screenshots/09-faq2.png) |
+
+---
+
+## ✨ امکانات پروژه
+
+- 🛒 **سبد خرید کامل** با ذخیره‌سازی در LocalStorage
+- 🔍 **جست‌وجو و فیلتر** محصولات
+- 👤 **سیستم ثبت‌نام و ورود** کاربران
+- 📦 **پیگیری سفارش** با کد رهگیری
+- ⚙️ **پنل ادمین** برای مدیریت محصولات، سفارشات و کاربران
+- ❓ **بخش سوالات متداول** تعاملی
+- 📱 **طراحی کاملاً واکنش‌گرا** (موبایل، تبلت، دسکتاپ)
+- 🔔 **سیستم اعلان Real-time** بین ادمین و کاربر
+- 🎨 **طراحی مدرن و لاکچری** با رنگ‌بندی اختصاصی
+
+---
+
+## 🛠️ تکنولوژی‌های استفاده‌شده
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![LocalStorage](https://img.shields.io/badge/LocalStorage-4B32C3?style=for-the-badge&logo=databricks&logoColor=white)
+
+---
+
+## 📂 ساختار پروژه
