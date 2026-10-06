@@ -12,39 +12,39 @@
 
 | نمای اول | امکانات |
 |---|---|
-| ![home1](assets/screenshots/01-home.png) | ![home2](assets/screenshots/02-home-features.png) |
+| ![home1](assets/img/screenshots/01-home.png.PNG) | ![home2](assets/img/screenshots/02-home-features.png.PNG) |
 
 | دسته‌بندی‌ها | محصولات پرطرفدار |
 |---|---|
-| ![home3](assets/screenshots/03-home-products.png) | ![home4](assets/screenshots/04-home-categories.png) |
+| ![home3](assets/img/screenshots/03-home-products.png.PNG) | ![home4](assets/img/screenshots/04-home-categories.png.PNG) |
 
-![home5](assets/screenshots/05-home-footer.png)
+![home5](assets/img/screenshots/05-home-footer.png.PNG)
 
 ---
 
 ### 🔐 ورود و ثبت‌نام
-![login](assets/screenshots/06-login.png)
+![login](assets/img/screenshots/06-login.png.PNG)
 
 ---
 
 ### 📦 صفحه محصول
 | محصول ۱ | محصول ۲ |
 |---|---|
-| ![product1](assets/screenshots/10-product.png) | ![product2](assets/screenshots/11-product2.png) |
+| ![product1](assets/img/screenshots/10-product.png.PNG) | ![product2](assets/img/screenshots/11-product2.png.PNG) |
 
-![products3](assets/screenshots/12-products.png)
+![products3](assets/img/screenshots/12-products.png.PNG)
 
 ---
 
 ### 📋 پیگیری سفارش
-![order-tracking](assets/screenshots/07-order-tracking.png)
+![order-tracking](assets/img/screenshots/07-order-tracking.png.PNG)
 
 ---
 
 ### ❓ سوالات متداول
 | بخش اول | بخش دوم |
 |---|---|
-| ![faq](assets/screenshots/08-faq.png) | ![faq2](assets/screenshots/09-faq2.png) |
+| ![faq](assets/img/screenshots/08-faq.png.PNG) | ![faq2](assets/img/screenshots/09-faq2.png.PNG) |
 
 ---
 
@@ -67,7 +67,6 @@
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![LocalStorage](https://img.shields.io/badge/LocalStorage-4B32C3?style=for-the-badge&logo=databricks&logoColor=white)
 
 ---
 
