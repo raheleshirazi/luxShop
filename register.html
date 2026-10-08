@@ -98,11 +98,14 @@
                         <div class="auth-alert" id="authAlert" hidden></div>
 
                         <!-- ✅ autocomplete="off" برای کل فرم -->
-                        <form class="auth-form" id="registerForm" novalidate autocomplete="off">
+                        <form class="auth-form" id="registerForm" novalidate autocomplete="off" data-lpignore="true"
+                            data-form-type="other">
 
                             <!-- Hidden fields to trick Chrome autofill -->
-                            <input type="text" style="display:none" aria-hidden="true" tabindex="-1" />
-                            <input type="password" style="display:none" aria-hidden="true" tabindex="-1" />
+                            <input type="text" name="fake_user" style="display:none" aria-hidden="true"
+                                tabindex="-1" autocomplete="off" />
+                            <input type="password" name="fake_pass" style="display:none" aria-hidden="true"
+                                tabindex="-1" autocomplete="new-password" />
 
                             <!-- Name -->
                             <div class="auth-field">
@@ -116,9 +119,9 @@
                                         </svg>
                                     </span>
                                     <input type="text" id="regName" name="loox_reg_name"
-                                        placeholder="مثلاً علی رضایی" required
-                                        autocomplete="off" autocorrect="off" autocapitalize="off"
-                                        spellcheck="false" />
+                                        placeholder="مثلاً علی رضایی" required autocomplete="off"
+                                        autocorrect="off" autocapitalize="off" spellcheck="false"
+                                        data-lpignore="true" data-form-type="other" />
                                 </div>
                             </div>
 
@@ -136,9 +139,9 @@
                                         </svg>
                                     </span>
                                     <input type="email" id="regEmail" name="loox_reg_email"
-                                        placeholder="example@mail.com" dir="ltr" required
-                                        autocomplete="off" autocorrect="off" autocapitalize="off"
-                                        spellcheck="false" />
+                                        placeholder="example@mail.com" dir="ltr" required autocomplete="off"
+                                        autocorrect="off" autocapitalize="off" spellcheck="false"
+                                        data-lpignore="true" data-form-type="other" />
                                 </div>
                             </div>
 
@@ -155,9 +158,9 @@
                                         </svg>
                                     </span>
                                     <input type="tel" id="regPhone" name="loox_reg_phone"
-                                        placeholder="۰۹۱۲۳۴۵۶۷۸۹" dir="ltr" required
-                                        autocomplete="off" autocorrect="off" autocapitalize="off"
-                                        spellcheck="false" />
+                                        placeholder="۰۹۱۲۳۴۵۶۷۸۹" dir="ltr" required autocomplete="off"
+                                        autocorrect="off" autocapitalize="off" spellcheck="false"
+                                        data-lpignore="true" data-form-type="other" />
                                 </div>
                             </div>
 
@@ -174,8 +177,8 @@
                                         </svg>
                                     </span>
                                     <input type="password" id="regPassword" name="loox_reg_pass1"
-                                        placeholder="حداقل ۶ کاراکتر" required
-                                        autocomplete="new-password" />
+                                        placeholder="حداقل ۶ کاراکتر" required autocomplete="new-password"
+                                        data-lpignore="true" />
                                     <button type="button" class="auth-toggle-pass" data-target="regPassword"
                                         aria-label="نمایش رمز">
                                         <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
@@ -200,8 +203,8 @@
                                         </svg>
                                     </span>
                                     <input type="password" id="regPassword2" name="loox_reg_pass2"
-                                        placeholder="تکرار رمز عبور" required
-                                        autocomplete="new-password" />
+                                        placeholder="تکرار رمز عبور" required autocomplete="new-password"
+                                        data-lpignore="true" />
                                     <button type="button" class="auth-toggle-pass" data-target="regPassword2"
                                         aria-label="نمایش رمز">
                                         <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
