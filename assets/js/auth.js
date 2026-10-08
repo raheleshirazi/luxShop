@@ -1,9 +1,7 @@
 /* ============================================================
-   LOOXSHOP — Auth Script (Login + Register)
-   Description: Handles login and register forms, user
-                storage in localStorage, and redirect logic.
-                + Login history tracking for admin panel.
-   Note: This is a DEMO. Real apps need a backend.
+   LOOXSHOP — Auth Script (Login + Register) — Final v2
+   Description: Login/Register + clear browser autofill
+                + login history tracking for admin panel.
 ============================================================ */
 
 (function () {
@@ -12,10 +10,10 @@
   /* ------------------------------------------------------------
      1. STORAGE KEYS
   ------------------------------------------------------------ */
-  const USERS_KEY = 'looxshop_users';              // array of registered users
-  const CURRENT_USER_KEY = 'looxshop_user';        // current logged-in user
-  const REDIRECT_KEY = 'looxshop_redirect';        // where to go after login
-  const LOGIN_HISTORY_KEY = 'looxshop_login_history'; // user login/logout
+  const USERS_KEY = 'looxshop_users';
+  const CURRENT_USER_KEY = 'looxshop_user';
+  const REDIRECT_KEY = 'looxshop_redirect';
+  const LOGIN_HISTORY_KEY = 'looxshop_login_history';
 
   /* ------------------------------------------------------------
      2. UTILITIES
@@ -32,7 +30,6 @@
   }
 
   function setCurrentUser(user) {
-    // Never store the password in the "current user"
     const { password, ...safeUser } = user;
     localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(safeUser));
   }
@@ -45,7 +42,6 @@
   }
 
   function normalizePhone(phone) {
-    // Convert Persian/Arabic digits to English and strip non-digits
     const persianDigits = '۰۱۲۳۴۵۶۷۸۹';
     const arabicDigits = '٠١٢٣٤٥٦٧٨٩';
     let result = String(phone);
@@ -65,10 +61,8 @@
 
   /* ------------------------------------------------------------
      3. LOGIN HISTORY TRACKER
-     Record every user login/logout in localStorage for display in the admin panel
   ------------------------------------------------------------ */
   function recordLoginEvent(user, type) {
-    // type: 'in' or 'out'
     if (!user || !user.email) return;
 
     try {
@@ -78,12 +72,11 @@
         userId: user.id || null,
         email: String(user.email).toLowerCase(),
         name: user.name || '',
-        type: type, // 'in' or 'out'
+        type: type,
         date: new Date().toISOString(),
         device: (navigator.userAgent || '').substring(0, 80)
       });
 
-      // Only the last 500 records are kept
       if (history.length > 500) {
         history.splice(0, history.length - 500);
       }
@@ -94,7 +87,6 @@
     }
   }
 
-  // Expose for other scripts
   window.LooxLoginHistory = {
     record: recordLoginEvent,
     getAll: function () {
@@ -113,7 +105,7 @@
     alertBox.textContent = message;
     alertBox.className = `auth-alert auth-alert--${type}`;
     alertBox.hidden = false;
-    // Auto-hide after 5s
+
     clearTimeout(alertBox._timer);
     alertBox._timer = setTimeout(() => {
       alertBox.hidden = true;
@@ -147,7 +139,39 @@
   }
 
   /* ------------------------------------------------------------
-     6. PASSWORD TOGGLE (show/hide)
+     5.5 CLEAR BROWSER AUTOFILL
+     ✅ پاک کردن فیلدهای پر شده توسط مرورگر
+     (کروم و فایرفاکس به autocomplete="off" احترام نمی‌گذارند)
+  ------------------------------------------------------------ */
+  function clearBrowserAutofill(fieldIds) {
+    const userTyped = {};
+
+    // اگه کاربر تایپ کرد، دیگه پاک نکن
+    fieldIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.addEventListener('input', () => {
+        userTyped[id] = true;
+      }, { once: true });
+    });
+
+    // ۳ بار در زمان‌های مختلف تلاش کن
+    [100, 400, 800].forEach((delay) => {
+      setTimeout(() => {
+        fieldIds.forEach((id) => {
+          const el = document.getElementById(id);
+          if (!el) return;
+          if (userTyped[id]) return;
+          if (el.value && el.value.trim() !== '') {
+            el.value = '';
+          }
+        });
+      }, delay);
+    });
+  }
+
+  /* ------------------------------------------------------------
+     6. PASSWORD TOGGLE
   ------------------------------------------------------------ */
   function initPasswordToggles() {
     document.querySelectorAll('.auth-toggle-pass').forEach((btn) => {
@@ -182,6 +206,9 @@
   function initLoginForm() {
     const form = document.getElementById('loginForm');
     if (!form) return;
+
+    // ✅ پاک کردن autofill مرورگر
+    clearBrowserAutofill(['loginIdentifier', 'loginPassword']);
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -224,8 +251,6 @@
 
       // ---- Success ----
       setCurrentUser(user);
-
-      // ✅ Record login in history
       recordLoginEvent(user, 'in');
 
       showAlert('ورود موفق! در حال انتقال...', 'success');
@@ -245,6 +270,12 @@
   function initRegisterForm() {
     const form = document.getElementById('registerForm');
     if (!form) return;
+
+    // ✅ پاک کردن autofill مرورگر
+    clearBrowserAutofill([
+      'regName', 'regEmail', 'regPhone',
+      'regPassword', 'regPassword2'
+    ]);
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -309,15 +340,13 @@
         name,
         email,
         phone,
-        password, // ⚠️ DEMO ONLY — never store plaintext passwords in real apps!
+        password,
         createdAt: new Date().toISOString()
       };
 
       users.push(newUser);
       saveUsers(users);
       setCurrentUser(newUser);
-
-      // ✅ Record login in history (immediately after registration)
       recordLoginEvent(newUser, 'in');
 
       showAlert('ثبت‌نام موفق! در حال انتقال...', 'success');
@@ -337,7 +366,6 @@
   function logout() {
     const currentUser = getCurrentUser();
 
-    // ✅ Record logout in history
     if (currentUser) {
       recordLoginEvent(currentUser, 'out');
     }
@@ -354,15 +382,10 @@
     initLoginForm();
     initRegisterForm();
 
-    // If user is already logged in and tries to open login/register,
-    // redirect them away (nicer UX)
     const isAuthPage = document.getElementById('loginForm') || document.getElementById('registerForm');
     if (isAuthPage && getCurrentUser()) {
       const redirect = getRedirectUrl();
       if (redirect) return;
-      // Otherwise send home
-      // (commented out to allow switching accounts — uncomment if you want)
-      // window.location.href = 'index.html';
     }
   });
 
